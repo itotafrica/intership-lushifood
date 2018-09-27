@@ -21,7 +21,21 @@
 <body>
 <style>
 #enline:hover{
-    background-color:rgba(1,155,1,0.6);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	color: white;
+}
+img {
+    border-radius: 5px 5px 0 0;
+}
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+     width: 100%;
 }
 
 </style>
@@ -41,7 +55,7 @@
 		</div>
 		<div class="wrap_header_mobile">
 			<a href="index.html" class="logo-mobile">
-				<H1>Gl<b style="color: red;">o</b>u Messager</H1>
+				<H1>Gl<b style="color: red;">o</b>u Messenger</H1>
 			</a>
 			<div class="btn-show-menu">
 				<div class="header-icons-mobile">
@@ -62,19 +76,6 @@
 		</div>
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
-
-					<li class="item-menu-mobile">
-						<a href="">Accueil</a>
-					</li class="item-menu-mobile">
-
-					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/link_about');?>">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="">Contact</a>
-					</li>
-				</ul>
 			</nav>
 		</div>
 	</header>
@@ -88,18 +89,13 @@
 						</h4>
 						<div class="filter-color p-t-22 p-b-50 bo3" id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
-                            <p>Enligne...</p>
 
 						</div>
                         <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
-                            <p>Enligne...</p>
-
 						</div>
                         <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
-                            <p>Enligne...</p>
-
 						</div>
 					</div>
 				</div>
