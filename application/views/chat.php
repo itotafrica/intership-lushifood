@@ -19,11 +19,17 @@
 <!--===============================================================================================-->
 </head>
 <body>
+<style>
+#enline:hover{
+    background-color:rgba(1,155,1,0.6);
+}
+
+</style>
 <header class="header1">
 		<div class="container-menu-header">
 			<div class="wrap_header">
 				<a href="" class="logo">
-					<H1>Gl<b style="color: red;">o</b>u Messager</H1>
+					<H1>Gl<b style="color: red;">o</b>u Messenger</H1>
 				</a>
 				<div class="header-icons">
 					<span class="linedivide1"></span>
@@ -80,17 +86,17 @@
 						<h4 class="m-text14 p-b-32">
 							EN LIGNE
 						</h4>
-						<div class="filter-color p-t-22 p-b-50 bo3">
+						<div class="filter-color p-t-22 p-b-50 bo3" id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
                             <p>Enligne...</p>
 
 						</div>
-                        <div class="filter-color p-t-22 p-b-50 bo3">
+                        <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
                             <p>Enligne...</p>
 
 						</div>
-                        <div class="filter-color p-t-22 p-b-50 bo3">
+                        <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
                             <p>Enligne...</p>
 
