@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('chat');
 	}
 	public function link_detail(){
 		$this->load->view('product-detail');
