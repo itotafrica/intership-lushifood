@@ -22,22 +22,33 @@
 <style>
 #enline:hover{
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	color: white;
+	color: black;
 }
-img {
-    border-radius: 5px 5px 0 0;
+#enline img, #send img {
+    border-radius: 100%;
 }
-.input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+#service{
+	position: absolute;
+	left:35%;
+	margin-top:-10%;
 }
-
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-     width: 100%;
+#send{
+	position: absolute;
+	margin-top: -12%;
+	width:10%;
+	left:69%;
 }
-
+textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	margin-top: 50%;
+	border-radius: 2%;
+	background: white;
+ }
 </style>
 <header class="header1">
 		<div class="container-menu-header">
@@ -46,6 +57,9 @@ input[type=text]:focus {
 					<H1>Gl<b style="color: red;">o</b>u Messenger</H1>
 				</a>
 				<div class="header-icons">
+				<a href="#" class="header-wrapicon1 dis-block">
+						<img src="<?php echo base_url('assets\images\icons\icon-header-01.png');?>" class="header-icon1" alt="ICON">
+					</a>
 					<span class="linedivide1"></span>
 					<div class="header-wrapicon2">
 						<a href=""><img src="<?php echo base_url('assets\images\para.png');?>" alt="ICON" width ="100%;"></a>
@@ -89,13 +103,15 @@ input[type=text]:focus {
 						</h4>
 						<div class="filter-color p-t-22 p-b-50 bo3" id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
-
+							<div id="service">Kankola tshibala</div>
 						</div>
                         <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
+							<div id="service"> Roland Roben</div>
 						</div>
                         <div class="filter-color p-t-22 p-b-50 bo3"  id="enline">
 							<img src="<?php echo base_url('assets/images/menu.jpg'); ?>" class="img-cercle" width ="30%">
+							<div id="service"> JoBoy</div>
 						</div>
 					</div>
 				</div>
@@ -117,7 +133,10 @@ input[type=text]:focus {
 							</div>
 						</div>
 					</div>
-
+					<textarea type="text" placeholder="Entrez un message" name="msg" required></textarea>
+					<div id ="send">
+ 						<a href =""><img src =" <?php echo base_url('assets\images\send.png');?>" width ="100%"></a>
+					</div>
 				</div>
 			</div>
 		</div>
