@@ -13,7 +13,7 @@
 			return $requete;
 		}
 
-		public function categorisation(){
+		public function categorie_items(){
 			
 			$requete = $this->db->query("SELECT * FROM categorieitem");
 			return $requete;

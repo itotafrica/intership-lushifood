@@ -20,7 +20,11 @@
 		.' '. $ligne->image; } ?> 
 	</p>
 
-	<p> <?php echo $ligne->id .' '. $ligne->nomcategorie .' '. $ligne->description .' '. $ligne->iditems ; } ?> </p>
+	<?php foreach($info_items->result() as $ligne){ ?>
+	
+	<p> <?php echo $ligne->id .' '. $ligne->nomcategorie .' '. $ligne->description
+		 .' '. $ligne->iditems ; } ?> 
+	</p>
 
 </body>
 </html>
