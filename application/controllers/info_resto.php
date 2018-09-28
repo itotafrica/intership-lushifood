@@ -19,6 +19,7 @@
 
 			$data["info_resto"] = $this->info_dao->info_resto();
 			$data["info_items"] = $this->info_dao->info_items();
+			$data["info_categorie_items"] = $this->info_dao->categorie_items();
 
 			$this->load->view("vue_resto", $data);
 		}

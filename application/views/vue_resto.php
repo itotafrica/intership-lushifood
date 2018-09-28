@@ -20,5 +20,7 @@
 		.' '. $ligne->image; } ?> 
 	</p>
 
+	<p> <?php echo $ligne->id .' '. $ligne->nomcategorie .' '. $ligne->description .' '. $ligne->iditems ; } ?> </p>
+
 </body>
 </html>
