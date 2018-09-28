@@ -46,14 +46,15 @@ class paniercmd extends CI_Controller {
             $nomuser = strip_tags($this->input->post('nameuser'));
             $addressemailuser = strip_tags($this->input->post('mail'));
             $nomarticle = $this->input->post('nomarticle');
-            $prixarticle = $this->input->post('prixarticle');
             $quantity = strip_tags($this->input->post('quantity'));
+            $prixtotal = strip_tags($this->input->post('total'));
             if (empty($nomuser) OR empty($teluser) OR empty($addressemailuser) OR empty($addressehomeuser)) {
-                redirect($_SERVER['HTTP_REFERER']);
+                return false;
             }
             if( !$this->seach->writecorrectyadressmail(	$addressemailuser)){
                 return false;
             }	
-           //requete du model
+           $this->essaie_model-> add_commande( $nomuser, $addressemailuser, $quantity, $prixtotal, $nomarticle);
+           redirect($_SERVER['HTTP_REFERER']);
         }
 }
