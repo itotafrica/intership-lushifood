@@ -209,8 +209,8 @@
 						</tr>
 						<?php echo form_close();?>
 						<?php //$tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
-						<?php $tab = $tab;?>
-						<?php $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
+						<?php //$tab = $tab;?>
+						<?php// $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
@@ -332,7 +332,7 @@
 				</h4>
 				<ul>
 					<li>
-						<a href="<?php echo base_url('welcome/aide'); ?>">Manuel de l'Aide</a>
+						<a href="">Manuel de l'Aide</a>
 					</li>
 					<li>
 						<a href="">0977756377</a>
