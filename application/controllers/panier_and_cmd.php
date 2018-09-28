@@ -8,6 +8,8 @@ class paniercmd extends CI_Controller {
         $this->load->model('essai_model');
         $this->load->library('cart');
     }
+    //============================================================================================
+        /*Ajout un plat dans un panier*/ 
     public function add_in_panier(){
 
             $data = array('id' => $this->input->post('id'),
@@ -18,12 +20,14 @@ class paniercmd extends CI_Controller {
             $this->cart->insert($data);
             redirect('welcome/panier');
         }
-    //==========================================================================================================
+    //===========================================================================================
+        /*Vue panier*/
         public function panier(){
         
             $this->load->view('panier');
         }
-    //==========================================================================================================
+    //===========================================================================================
+        /*mise a jour du panier */
         public function mettreajourpanier(){
             $data = array('rowid' =>$this->input->post('id') , 
                     'qty'=>$this->input->post('quantity'));
