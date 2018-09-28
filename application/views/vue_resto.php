@@ -10,7 +10,15 @@
 	
 	<?php foreach($info_resto->result() as $ligne){ ?>
 	
-	<p> <?php echo $ligne->nom; } ?> </p>
+	<p> <?php echo $ligne->id .' '. $ligne->nom .' '. $ligne->longitude .' '. $ligne->latitude .' '.
+	 	$ligne->phone .' '. $ligne->mail; } ?> 
+	</p>
+
+	<?php foreach($info_items->result() as $ligne){ ?>
+	
+	<p> <?php echo $ligne->id .' '. $ligne->nom .' '. $ligne->description .' '. $ligne->pu 
+		.' '. $ligne->image; } ?> 
+	</p>
 
 </body>
 </html>
