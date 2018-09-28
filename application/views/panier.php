@@ -21,32 +21,6 @@
 <body class="animsition">
 	<header class="header1">
 		<div class="container-menu-header">
-			<div class="topbar">
-				<div class="topbar-social">
-					<a href="www.facebook.com" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-				</div>
-
-				<span class="topbar-child1">
-					payez et commandez des articles.
-				</span>
-
-				<div class="topbar-child2">
-					<span class="topbar-email">
-						elviskankola1@gmail.com
-					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-						</select>
-					</div>
-				</div>
-			</div>
-
 			<div class="wrap_header">
 				<a href="<?php //echo base_url('welcome/index');?>" class="logo">
 					<H1>Gl<b style="color: red;">o</b>u</H1>
@@ -60,10 +34,6 @@
 							<li>
 								<a href="<?php //echo base_url('welcome/apropos'); ?>">About</a>
 							</li>
-
-							<li>
-								<a href="<?php //echo base_url('welcome/contact');?>">Contact</a>
-							</li>
 						</ul>
 					</nav>
 				</div>
@@ -71,8 +41,8 @@
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="<?php echo base_url('assets/images/icon-header-01.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti"><?php// echo $this->cart->total_items();?></span>
+						<img src="<?php echo base_url('assets/images/icons/icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">1</span>
 
 					</div>
 				</div>
@@ -149,7 +119,7 @@
 			</nav>
 		</div>
 	</header>
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php// echo base_url('assets/images/menu.jpg');?>);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/menu.jpg');?>);">
 		<h2 class="l-text2 t-center">
 			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 			Panier
@@ -175,11 +145,11 @@
 						<tr class="table-row">
 							<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php// echo base_url($value['file']);?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 							<td class="column-2"><h6><b><?php// echo $value['name']; ?></b></h6></td>
-							<td class="column-3"><h6><b><?php //echo (float)$prix;?>$</b></h6></td>
+							<td class="column-3"><h6><b><?php //echo (float)$prix;?>10$</b></h6></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
@@ -194,12 +164,12 @@
 								</div>
 								<input type="hidden" value="<?php //echo $value['rowid'];?>" name ="id" >
 							</td>
-							<td class="column-5"><h6><b><?php //$prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>$</b></h6></td>
+							<td class="column-5"><h6><b><?php //$prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>10$</b></h6></td>
 							<td class="column-6"><button>
-									<img src="" width = '30%'>
+									<img src="<?php echo base_url('assets\images\update1.png');?>" width = '30%'>
 								</button>	</td>
 							<td class="column-7"><a href='<?php// echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
-									<img src="" width = '30%'>
+									<img src="<?php echo base_url('assets\images\sup1.png');?>" width = '30%'>
 								</a>	</td>
 						</tr>
 						<?php //echo form_close();?>
@@ -209,7 +179,7 @@
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php //echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 						<td class="column-2"><h6><b>FACTURE</b></h6></td>
