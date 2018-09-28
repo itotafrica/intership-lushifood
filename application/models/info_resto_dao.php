@@ -7,7 +7,8 @@
 
 			$requete = $this->db->select(Array('nom','adresse','phone','mail'))
 								->WHERE('id',(int)$id)
-								->get($this->table);
+								->get($this->table)
+								->result();
 			return $requete;
 		}
 
