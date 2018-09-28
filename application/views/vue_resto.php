@@ -11,23 +11,10 @@
 
 	<?php /*NB: CETTE PAGE EST UNE VUE DE TEST EST N'EST PAS A METTRE DANS LE PROJECT	*/ ?>
 
-	<?php foreach($info_resto->result() as $ligne){ ?>
+	<?php foreach($info_resto as $ligne): ?>
 	
-	<p> <?php echo $ligne->id .' '. $ligne->nom .' '. $ligne->longitude .' '. $ligne->latitude .' '.
-	 	$ligne->phone .' '. $ligne->mail; } ?> 
-	</p>
-
-	<?php foreach($info_items->result() as $ligne){ ?>
-	
-	<p> <?php echo $ligne->id .' '. $ligne->nom .' '. $ligne->description .' '. $ligne->pu 
-		.' '. $ligne->image; } ?> 
-	</p>
-
-	<?php foreach($info_categorie_items->result() as $ligne){ ?>
-	
-	<p> <?php echo $ligne->id .' '. $ligne->nomcategorie .' '. $ligne->description
-		 .' '. $ligne->iditems ; } ?> 
-	</p>
+		<p> <?php echo $ligne->nom .' '. $ligne->adresse .' '. $ligne->phone .' '. $ligne->mail;  ?> </p>
+	<?php endforeach ?>
 
 </body>
 </html>
