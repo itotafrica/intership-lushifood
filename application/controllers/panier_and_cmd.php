@@ -2,7 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class paniercmd extends CI_Controller {
-
+    //==========================================================================================
+        /* conrtucteur et loading des bibliotheques, model et helper*/
     function __construct(){
         parent::__construct();
         $this->load->model('essai_model');
@@ -34,19 +35,23 @@ class paniercmd extends CI_Controller {
             $this->cart->update($data);
             redirect($_SERVER['HTTP_REFERER']);
         }
-    //==========================================================================================================
+    //============================================================================================
+        /*efface dans un plat dans un article */
         public function deletepanier(){
 
             $data = array('rowid'=>$this->uri->segment(3),'qty'=>0);
             $this->cart->update($data);
             redirect($_SERVER['HTTP_REFERER']);
         }
-    //==========================================================================================================
+    //=============================================================================================
+        /*vide tout le panier */
+        
         public function viderpanier(){
             $this->cart->destroy();
             redirect($_SERVER['HTTP_REFERER']);
         }
-    //==========================================================================================================
+    //=============================================================================================
+        /*passe la commande et communique avec le model */
         public function passetacommande(){
             $nomuser = strip_tags($this->input->post('nameuser'));
             $addressemailuser = strip_tags($this->input->post('mail'));
