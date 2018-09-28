@@ -9,11 +9,5 @@
 			return $requete;
 		}
 
-		public function info_items(){
-
-			$requete = $this->db->query("SELECT * FROM items");
-			return $requete;
-		}
-
 	}
 ?>
