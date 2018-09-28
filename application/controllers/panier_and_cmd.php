@@ -27,7 +27,6 @@ class paniercmd extends CI_Controller {
             $data = array('rowid' =>$this->input->post('id') , 
                     'qty'=>$this->input->post('quantity'));
             $this->cart->update($data);
-            $this->input->post('quantity');
             redirect($_SERVER['HTTP_REFERER']);
         }
     //==========================================================================================================
