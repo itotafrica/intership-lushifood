@@ -17,10 +17,10 @@
 
 			$this->load->model("info_resto_dao", "info_dao");
 
-			$data["info_resto"] = $this->info_dao->info_resto();
-			$data["info_items"] = $this->info_dao->info_items();
-			$data["info_categorie_items"] = $this->info_dao->categorie_items();
+			$id = $this->input->get('id');
 
+			$data["info_resto"] = $this->info_dao->info_resto($id);
+			
 			$this->load->view("vue_resto", $data);
 		}
 		
