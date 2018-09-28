@@ -18,6 +18,11 @@
 			$requete = $this->db->query("SELECT * FROM categorieitem");
 			return $requete;
 		}
+
+		public function getIdResto(){
+
+			$id = $this->input->get('id');
+		}
 			
 	}
 ?>
