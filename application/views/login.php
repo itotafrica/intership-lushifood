@@ -20,9 +20,6 @@
 		<div class="container-login100" style="background-image:url('<?php echo base_url('assets/images/menu.jpg');?>');background-repeat: no-repeat;background-size: 100%;">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30" style="background: rgba(255,255,255,0.8); ">
 				<form class="login100-form validate-form">
-					<?php
-						form_open(site_url('index.php/login/connexion'));
-					?>
 					<span class="login100-form-title p-b-55">
 						Login
 					</span>
