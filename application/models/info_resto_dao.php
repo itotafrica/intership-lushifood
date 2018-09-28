@@ -8,9 +8,16 @@
 		}
 
 		public function info_items(){
-			
+
 			$requete = $this->db->query("SELECT * FROM items");
 			return $requete;
 		}
+
+		public function categorisation(){
+			
+			$requete = $this->db->query("SELECT * FROM categorieitem");
+			return $requete;
+		}
+			
 	}
 ?>
