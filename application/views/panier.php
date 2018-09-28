@@ -192,7 +192,7 @@
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php //echo base_url('assets/images/logo.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url('assets/images/menu.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 						<td class="column-2"><h6><b>FACTURE</b></h6></td>
@@ -345,7 +345,7 @@
 			</div>
 		</div>
 	</footer>
-	<script src="<?php //echo base_url('assets\js\main.js'); ?>"></script>
+	<script src="<?php echo base_url('assets\js\main.js'); ?>"></script>
 
 </body>
 </html>
