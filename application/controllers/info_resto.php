@@ -24,5 +24,8 @@
 			$this->load->view("vue_resto", $data);
 		}
 		
+		public function add_items(){
+			
+		}
 	}
 ?>
