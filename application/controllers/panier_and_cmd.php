@@ -5,8 +5,8 @@ class paniercmd extends CI_Controller {
 
     function __construct(){
         parent::__construct();
+        $this->load->model('essai_model');
     }
-    
     public function add_in_panier(){
 
             $data = array('id' => $this->input->post('id'),
