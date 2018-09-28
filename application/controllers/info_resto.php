@@ -25,7 +25,16 @@
 		}
 		
 		public function add_items(){
+
+			$this->load->model("info_resto_dao", "info_dao");
 			
+			$nom = $this->input->get('nom');
+			$description = $this->input->get('description');
+			$pu = $this->input->get('pu');
+
+			$data['items'] = $this->info_dao->set_items($nom, $description, $pu);
+			
+			$this->load->view("vue_items", $data);
 		}
 	}
 ?>
