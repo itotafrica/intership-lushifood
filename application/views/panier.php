@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<title>Panier</title>
-	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="<?php echo base_url('assets\images\icons\favicon.ico');?>"/>
@@ -22,17 +23,26 @@
 	<header class="header1">
 		<div class="container-menu-header">
 			<div class="wrap_header">
-				<a href="<?php //echo base_url('welcome/index');?>" class="logo">
-					<H1>Gl<b style="color: red;">o</b>u</H1>
+				<a href="<?php echo base_url('welcome/index');?>" class="logo">
+					<H1><b style="color: red;">U</b>NIQUE</H1>
 				</a>
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="<?php //echo base_url('welcome/home');?>"">Accueil</a>
+								<a href="<?php echo base_url('welcome/home');?>"">Accueil</a>
 							</li>
+
+							<li class="sale-noti">
+								<a href="<?php echo base_url('welcome/produicts');?>">market</a>
+							</li>
+
 							<li>
-								<a href="<?php //echo base_url('welcome/apropos'); ?>">About</a>
+								<a href="<?php echo base_url('welcome/apropos'); ?>">About</a>
+							</li>
+
+							<li>
+								<a href="<?php echo base_url('welcome/contact');?>">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -42,7 +52,7 @@
 
 					<div class="header-wrapicon2">
 						<img src="<?php echo base_url('assets/images/icons/icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">1</span>
+						<span class="header-icons-noti"><?php echo $this->cart->total_items();?></span>
 
 					</div>
 				</div>
@@ -63,8 +73,8 @@
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="<?php// echo base_url('assets\images\icons\icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti"><?php// echo $this->cart->total_items(); ?></span>
+						<img src="<?php echo base_url('assets\images\icons\icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti"><?php echo $this->cart->total_items(); ?></span>
 					</div>
 				</div>
 
@@ -110,16 +120,24 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="">Accueil</a>
+						<a href="<?php echo base_url('welcome/home');?>">Accueil</a>
 					</li class="item-menu-mobile">
 					<li class="item-menu-mobile">
-						<a href="">About</a>
+						<a href="<?php echo base_url('welcome/produicts');?>">market</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="<?php echo base_url('welcome/apropos');?>">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="<?php echo base_url('welcome/contact');?>">Contact</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/menu.jpg');?>);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/galaxie.jpg');?>);">
 		<h2 class="l-text2 t-center">
 			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 			Panier
@@ -127,6 +145,7 @@
 	</section>
 	
 	<section class="cart bgwhite p-t-70 p-b-100">
+		<?php if($this->cart->contents()):?>
 		<div class="container">
 			<div class="container-table-cart pos-relative">
 				<div class="wrap-table-shopping-cart bgwhite">
@@ -140,61 +159,63 @@
 							<th class="column-5">Rafraichir</th>
 							<th class="column-5">supprimer</th>
 						</tr>
-						<?php //echo form_open('welcome/mettreajourpanier');?>
-						<h5><b><?php //$prix =$value['price']; ?></b></h5>
+						<?php foreach($this->cart->contents() as $value):?>
+						<?php echo form_open('welcome/mettreajourpanier');?>
+						<h5><b><?php $prix =$value['price']; ?></b></h5>
 						<tr class="table-row">
 							<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url($value['file']);?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
-							<td class="column-2"><h6><b><?php// echo $value['name']; ?></b></h6></td>
-							<td class="column-3"><h6><b><?php //echo (float)$prix;?>10$</b></h6></td>
+							<td class="column-2"><h6><b><?php echo $value['name']; ?></b></h6></td>
+							<td class="column-3"><h6><b><?php echo (float)$prix;?>$</b></h6></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 									</button>
 
-									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="1<?php// $q = $value['qty'];echo $q;?>">
+									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="<?php $q = $value['qty'];echo $q;?>">
 
 									<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
 									</button>
 								</div>
-								<input type="hidden" value="<?php //echo $value['rowid'];?>" name ="id" >
+								<input type="hidden" value="<?php echo $value['rowid'];?>" name ="id" >
 							</td>
-							<td class="column-5"><h6><b><?php //$prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>10$</b></h6></td>
+							<td class="column-5"><h6><b><?php $prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>$</b></h6></td>
 							<td class="column-6"><button>
-									<img src="<?php echo base_url('assets\images\update1.png');?>" width = '30%'>
+									<img src="<?php echo base_url('assets/images/update1.png'); ?>" width = '30%'>
 								</button>	</td>
-							<td class="column-7"><a href='<?php// echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
-									<img src="<?php echo base_url('assets\images\sup1.png');?>" width = '30%'>
+							<td class="column-7"><a href='<?php echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
+									<img src="<?php echo base_url('assets/images/sup1.png');?>" width = '30%'>
 								</a>	</td>
 						</tr>
-						<?php //echo form_close();?>
-						<?php //$tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
-						<?php //$tab = $tab;?>
-						<?php// $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
+						<?php echo form_close();?>
+						<?php $tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
+						<?php endforeach?>
+						<?php $tab = $tab;?>
+						<?php $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url('assets/images/logo.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 						<td class="column-2"><h6><b>FACTURE</b></h6></td>
 							<td class="column-3"><h6><b>_________</b></h6></td>
 							<td class="column-4"><h6><b>
-								  articles
+								<?php echo $this->cart->total_items();?>  articles
 								</b></h6>
 							</td>
-							<td class="column-5"><h6><b>total</b></h6></td>
+							<td class="column-5"><h6><b><?php echo $this->cart->total()."$";?></b></h6></td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-		<?php //echo form_open('welcome/passetacommande');?>
+		<?php echo form_open('welcome/passetacommande');?>
 		<section class="bgwhite p-t-66 p-b-60" >
 		<div class="container">
 			<div class="row">
@@ -221,14 +242,20 @@
 						</div>
 						
 							<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="adresse" placeholder="Dimicile. exemple: lubumbashi/lubumbashi/golf/numero 1234" required=""></textarea>
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="nomarticle"  value="">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="prixarticle"  value="
-									">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="taillearticle" value="
-									">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="colorarticle"  value="
-									">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="quantity"  value="">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="nomarticle"  value="<?php for($i =0;$i<count($tab);$i++):
+									echo $tab[$i];
+									endfor?>">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="prixarticle"  value="<?php for($j = 0;$j<count($tabprix);$j++):
+									echo $tabprix[$j];
+									endfor
+									?>">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="taillearticle" value="<?php for($k = 0;$k<count($tabtaille);$k++):
+									echo $tabtaille[$k];
+									endfor?>">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="colorarticle"  value="<?php for($l = 0;$l<count($tabcolor);$l++):
+									echo $tabcolor[$l];
+									endfor?>">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="quantity"  value="<?php echo $this->cart->total_items();?>">
 						<div class="w-size25">
 							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 								COMMANDER
@@ -238,7 +265,9 @@
 				</div>
 			</div>
 	</section>
-	<?php //echo form_close();?>
+	<?php echo form_close();?>
+	<?php else: echo "<h1 style ='text-align:center'>Vous n'avez rien dans le panier!</h1>";?>
+	<?php endif?>
 	</section>
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
@@ -297,7 +326,7 @@
 				</h4>
 				<ul>
 					<li>
-						<a href="">Manuel de l'Aide</a>
+						<a href="<?php echo base_url('welcome/aide'); ?>">Manuel de l'Aide</a>
 					</li>
 					<li>
 						<a href="">0977756377</a>
@@ -311,7 +340,7 @@
 					ABONNEZ-VOUS
 				</h4>
 
-				<?php //echo form_open("welcome/abonnezvous");?>
+				<?php echo form_open("welcome/abonnezvous");?>
 					<div class="effect1 w-size9">
 						<input class="s-text7 bg6 w-full p-b-5" type="text" name="mail" placeholder="email@exemple.com" required="">
 						<span class="effect1-line"></span>
@@ -323,7 +352,7 @@
 						</button>
 					</div>
 
-				<?php //echo form_close();?>
+				<?php echo form_close();?>
 			</div>
 		</div>
 
@@ -334,14 +363,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="<?php echo base_url('assets\js\main.js'); ?>"></script>
 
-
-
-	<!-- Back to top -->
-	<div class="btn-back-to-top bg0-hov" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
-	</div>
 </body>
 </html>
