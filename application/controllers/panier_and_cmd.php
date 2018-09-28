@@ -6,6 +6,7 @@ class paniercmd extends CI_Controller {
     function __construct(){
         parent::__construct();
         $this->load->model('essai_model');
+        $this->load->library('cart');
     }
     public function add_in_panier(){
 
@@ -57,4 +58,5 @@ class paniercmd extends CI_Controller {
            $this->essaie_model-> add_commande( $nomuser, $addressemailuser, $quantity, $prixtotal, $nomarticle);
            redirect($_SERVER['HTTP_REFERER']);
         }
+    //============================================================================================================
 }
