@@ -48,26 +48,21 @@
 			</div>
 
 			<div class="wrap_header">
-				<a href="<?php echo base_url('welcome/index');?>" class="logo">
-					<H1><b style="color: red;">U</b>NIQUE</H1>
+				<a href="<?php //echo base_url('welcome/index');?>" class="logo">
+					<H1>Gl<b style="color: red;">o</b>u</H1>
 				</a>
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="<?php echo base_url('welcome/home');?>"">Accueil</a>
+								<a href="<?php //echo base_url('welcome/home');?>"">Accueil</a>
 							</li>
-
-							<li class="sale-noti">
-								<a href="<?php echo base_url('welcome/produicts');?>">market</a>
+							<li>
+								<a href="<?php //echo base_url('welcome/apropos'); ?>">About</a>
 							</li>
 
 							<li>
-								<a href="<?php echo base_url('welcome/apropos'); ?>">About</a>
-							</li>
-
-							<li>
-								<a href="<?php echo base_url('welcome/contact');?>">Contact</a>
+								<a href="<?php //echo base_url('welcome/contact');?>">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -76,8 +71,8 @@
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="<?php echo base_url('assets/images/icons/icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti"><?php echo $this->cart->total_items();?></span>
+						<img src="<?php echo base_url('assets/images/icon-header-01.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti"><?php// echo $this->cart->total_items();?></span>
 
 					</div>
 				</div>
@@ -98,8 +93,8 @@
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="<?php echo base_url('assets\images\icons\icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti"><?php echo $this->cart->total_items(); ?></span>
+						<img src="<?php// echo base_url('assets\images\icons\icon-header-02.png');?>" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti"><?php// echo $this->cart->total_items(); ?></span>
 					</div>
 				</div>
 
@@ -154,7 +149,7 @@
 			</nav>
 		</div>
 	</header>
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/menu.jpg');?>);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php// echo base_url('assets/images/menu.jpg');?>);">
 		<h2 class="l-text2 t-center">
 			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 			Panier
@@ -175,46 +170,46 @@
 							<th class="column-5">Rafraichir</th>
 							<th class="column-5">supprimer</th>
 						</tr>
-						<?php echo form_open('welcome/mettreajourpanier');?>
-						<h5><b><?php $prix =$value['price']; ?></b></h5>
+						<?php //echo form_open('welcome/mettreajourpanier');?>
+						<h5><b><?php //$prix =$value['price']; ?></b></h5>
 						<tr class="table-row">
 							<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php echo base_url($value['file']);?>" alt="IMG-PRODUCT">
+									<img src="<?php// echo base_url($value['file']);?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
-							<td class="column-2"><h6><b><?php echo $value['name']; ?></b></h6></td>
-							<td class="column-3"><h6><b><?php echo (float)$prix;?>$</b></h6></td>
+							<td class="column-2"><h6><b><?php// echo $value['name']; ?></b></h6></td>
+							<td class="column-3"><h6><b><?php //echo (float)$prix;?>$</b></h6></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 									</button>
 
-									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="<?php $q = $value['qty'];echo $q;?>">
+									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="1<?php// $q = $value['qty'];echo $q;?>">
 
 									<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
 									</button>
 								</div>
-								<input type="hidden" value="<?php echo $value['rowid'];?>" name ="id" >
+								<input type="hidden" value="<?php //echo $value['rowid'];?>" name ="id" >
 							</td>
-							<td class="column-5"><h6><b><?php $prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>$</b></h6></td>
+							<td class="column-5"><h6><b><?php //$prixeunitaire = $value['qty']*$value['price']; echo $prixeunitaire; ?>$</b></h6></td>
 							<td class="column-6"><button>
-									<img src="<?php echo base_url('assets/images/update1.png'); ?>" width = '30%'>
+									<img src="" width = '30%'>
 								</button>	</td>
-							<td class="column-7"><a href='<?php echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
-									<img src="<?php echo base_url('assets/images/sup1.png');?>" width = '30%'>
+							<td class="column-7"><a href='<?php// echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
+									<img src="" width = '30%'>
 								</a>	</td>
 						</tr>
-						<?php echo form_close();?>
+						<?php //echo form_close();?>
 						<?php //$tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
 						<?php //$tab = $tab;?>
 						<?php// $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php //echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 						<td class="column-2"><h6><b>FACTURE</b></h6></td>
@@ -229,7 +224,7 @@
 				</div>
 			</div>
 		</div>
-		<?php echo form_open('welcome/passetacommande');?>
+		<?php //echo form_open('welcome/passetacommande');?>
 		<section class="bgwhite p-t-66 p-b-60" >
 		<div class="container">
 			<div class="row">
@@ -273,7 +268,7 @@
 				</div>
 			</div>
 	</section>
-	<?php echo form_close();?>
+	<?php //echo form_close();?>
 	</section>
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
@@ -346,7 +341,7 @@
 					ABONNEZ-VOUS
 				</h4>
 
-				<?php echo form_open("welcome/abonnezvous");?>
+				<?php //echo form_open("welcome/abonnezvous");?>
 					<div class="effect1 w-size9">
 						<input class="s-text7 bg6 w-full p-b-5" type="text" name="mail" placeholder="email@exemple.com" required="">
 						<span class="effect1-line"></span>
@@ -358,7 +353,7 @@
 						</button>
 					</div>
 
-				<?php echo form_close();?>
+				<?php //echo form_close();?>
 			</div>
 		</div>
 
