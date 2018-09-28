@@ -10,17 +10,18 @@
 
 		public function index(){
 
-			$this->i_resto();
+			$this->info();
 		}
 
-		public function i_resto(){
+		public function info(){
 
 			$this->load->model("info_resto_dao", "info_dao");
+
 			$data["info_resto"] = $this->info_dao->info_resto();
+			$data["info_items"] = $this->info_dao->info_items();
+
 			$this->load->view("vue_resto", $data);
 		}
-
-	
-
+		
 	}
 ?>
