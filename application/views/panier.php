@@ -168,7 +168,7 @@
 										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 									</button>
 
-									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="<?php// $q = $value['qty'];echo $q;?>">
+									<input class="size8 m-text18 t-center num-product" type="number" name="quantity" value="1" style ="color:black;">
 
 									<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
@@ -180,7 +180,7 @@
 							<td class="column-6"><button>
 									<img src="<?php echo base_url('assets/images/update1.png'); ?>" width = '30%'>
 								</button>	</td>
-							<td class="column-7"><a href='<?php// echo base_url('welcome/deletepanier/'.$value['rowid']);?>'>
+							<td class="column-7"><a href='// echo base_url('welcome/deletepanier/'.$value['rowid']);'>
 									<img src="<?php echo base_url('assets/images/sup1.png');?>" width = '30%'>
 								</a>	</td>
 						</tr>
