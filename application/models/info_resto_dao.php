@@ -12,5 +12,9 @@
 			return $requete;
 		}
 
+		public function set_items(){
+
+			
+		}
 	}
 ?>
