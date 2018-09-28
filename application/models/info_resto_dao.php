@@ -3,7 +3,7 @@
 
 		public function info_resto(){
 
-			$requete = $this->db->query("SELECT * FROM restaurant");
+			$requete = $this->db->select(Array('nom'))->WHERE('id',int($i))->get($this->nom_table);
 			return $requete;
 		}
 
@@ -12,17 +12,6 @@
 			$requete = $this->db->query("SELECT * FROM items");
 			return $requete;
 		}
-
-		public function categorie_items(){
-			
-			$requete = $this->db->query("SELECT * FROM categorieitem");
-			return $requete;
-		}
-
-		public function getIdResto(){
-
-			$id = $this->input->get('id');
-		}
-			
+		
 	}
 ?>
