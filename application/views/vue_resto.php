@@ -7,7 +7,10 @@
 	<title>Info resto</title>
 </head>
 <body>
-	
+
+
+	<?php /*NB: CETTE PAGE EST UNE VUE DE TEST EST N'EST PAS A METTRE DANS LE PROJECT	*/ ?>
+
 	<?php foreach($info_resto->result() as $ligne){ ?>
 	
 	<p> <?php echo $ligne->id .' '. $ligne->nom .' '. $ligne->longitude .' '. $ligne->latitude .' '.
