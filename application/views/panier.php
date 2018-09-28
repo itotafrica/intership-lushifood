@@ -2,36 +2,20 @@
 <html lang="en">
 <head>
 	<title>Panier</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?php echo base_url('assets\images\icons\favicon.png');?>">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="<?php echo base_url('assets\images\icons\favicon.ico');?>"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\bootstrap\css\bootstrap.min.css');?>">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\fonts\font-awesome-4.7.0\css\font-awesome.min.css');?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\fonts\themify\themify-icons.css');?>"">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\fonts\Linearicons-Free-v1.0.0\icon-font.min.css');?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\fonts\elegant-font\html-css\style.css');?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\animate\animate.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\css-hamburgers\hamburgers.min.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\animsition\css\animsition.min.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\select2\select2.min.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\daterangepicker\daterangepicker.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\slick\slick.css'); ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\vendor\lightbox2\css\lightbox.min.css');?>">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\util.css');?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\utiles.css');?>">
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\main.css');?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\style.css');?>">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -161,24 +145,16 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/home');?>">Accueil</a>
+						<a href="">Accueil</a>
 					</li class="item-menu-mobile">
 					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/produicts');?>">market</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/apropos');?>">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/contact');?>">Contact</a>
+						<a href="">About</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/galaxie.jpg');?>);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(<?php echo base_url('assets/images/menu.jpg');?>);">
 		<h2 class="l-text2 t-center">
 			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 			Panier
@@ -186,7 +162,6 @@
 	</section>
 	
 	<section class="cart bgwhite p-t-70 p-b-100">
-		<?php if($this->cart->contents()):?>
 		<div class="container">
 			<div class="container-table-cart pos-relative">
 				<div class="wrap-table-shopping-cart bgwhite">
