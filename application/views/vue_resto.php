@@ -14,6 +14,7 @@
 	<?php foreach($info_resto as $ligne): ?>
 	
 		<p> <?php echo $ligne->nom .' '. $ligne->adresse .' '. $ligne->phone .' '. $ligne->mail;  ?> </p>
+		
 	<?php endforeach ?>
 
 </body>
