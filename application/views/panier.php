@@ -175,7 +175,6 @@
 							<th class="column-5">Rafraichir</th>
 							<th class="column-5">supprimer</th>
 						</tr>
-						<?php foreach($this->cart->contents() as $value):?>
 						<?php echo form_open('welcome/mettreajourpanier');?>
 						<h5><b><?php $prix =$value['price']; ?></b></h5>
 						<tr class="table-row">
@@ -209,23 +208,22 @@
 								</a>	</td>
 						</tr>
 						<?php echo form_close();?>
-						<?php $tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
-						<?php endforeach?>
+						<?php //$tab[] = $value['name']; $tabprix[] = $value['price']; $tabqty[] = $value['qty']; $tabtaille[]= $value['option']['Size']; $tabcolor[]= $value['option']['Color'];?>
 						<?php $tab = $tab;?>
 						<?php $tabprix = $tabprix; $tabqty = $tabqty;$tabtaille = $tabtaille;?>
 						<tr style="color: green; font-size: 12px; font-family: bold;">
 						<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="<?php echo base_url('assets/images/logo.jpg');?>" alt="IMG-PRODUCT">
+									<img src="<?php echo base_url('assets\images\menu.jpg');?>" alt="IMG-PRODUCT">
 								</div>
 							</td>
 						<td class="column-2"><h6><b>FACTURE</b></h6></td>
 							<td class="column-3"><h6><b>_________</b></h6></td>
 							<td class="column-4"><h6><b>
-								<?php echo $this->cart->total_items();?>  articles
+								  articles
 								</b></h6>
 							</td>
-							<td class="column-5"><h6><b><?php echo $this->cart->total()."$";?></b></h6></td>
+							<td class="column-5"><h6><b>total</b></h6></td>
 						</tr>
 					</table>
 				</div>
@@ -258,20 +256,14 @@
 						</div>
 						
 							<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="adresse" placeholder="Dimicile. exemple: lubumbashi/lubumbashi/golf/numero 1234" required=""></textarea>
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="nomarticle"  value="<?php for($i =0;$i<count($tab);$i++):
-									echo $tab[$i];
-									endfor?>">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="prixarticle"  value="<?php for($j = 0;$j<count($tabprix);$j++):
-									echo $tabprix[$j];
-									endfor
-									?>">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="taillearticle" value="<?php for($k = 0;$k<count($tabtaille);$k++):
-									echo $tabtaille[$k];
-									endfor?>">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="colorarticle"  value="<?php for($l = 0;$l<count($tabcolor);$l++):
-									echo $tabcolor[$l];
-									endfor?>">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="quantity"  value="<?php echo $this->cart->total_items();?>">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="nomarticle"  value="">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="prixarticle"  value="
+									">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="taillearticle" value="
+									">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="colorarticle"  value="
+									">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="hidden" name="quantity"  value="">
 						<div class="w-size25">
 							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 								COMMANDER
@@ -282,8 +274,6 @@
 			</div>
 	</section>
 	<?php echo form_close();?>
-	<?php else: echo "<h1 style ='text-align:center'>Vous n'avez rien dans le panier!</h1>";?>
-	<?php endif?>
 	</section>
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
