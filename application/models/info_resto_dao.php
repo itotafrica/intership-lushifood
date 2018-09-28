@@ -3,7 +3,9 @@
 
 		public function info_resto(){
 
-			$requete = $this->db->select(Array('nom'))->WHERE('id',int($i))->get($this->nom_table);
+			$requete = $this->db->select(Array('nom','adresse','phone','mail'))
+								->WHERE('id',int($id))
+								->get($this->table);
 			return $requete;
 		}
 
@@ -12,6 +14,6 @@
 			$requete = $this->db->query("SELECT * FROM items");
 			return $requete;
 		}
-		
+
 	}
 ?>
