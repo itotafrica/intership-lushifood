@@ -6,7 +6,8 @@
 			parent::__construct();
 
 			$this->load->database();
-			$this->load->model("info_resto_dao", "info_dao");
+			$this->load->model("info_resto_dao");
+			$this->load->library('form_validation');
 			
 		}
 
@@ -19,7 +20,7 @@
 
 			$id = $this->input->get('id');
 
-			$data["info_resto"] = $this->info_dao->info_resto($id);
+			$data["info_resto"] = $this->info_resto_dao->info_resto($id);
 			
 			$this->load->view("vue_resto", $data);
 		}
@@ -29,10 +30,20 @@
 			$nom = $this->input->post('nom');
 			$description = $this->input->post('description');
 			$pu = $this->input->post('pu');
-
-			$data['items'] = $this->info_dao->set_items($nom, $description, $pu);
+		
+			$data['set_items'] = $this->info_resto_dao->set_items($nom, $description, $pu);
+			var_dump($data);
+			die();
+			$this->load->view('vue_items_info', $data);
 			
-			$this->load->view("vue_items", $data);
+
 		}
+
+		public function page(){
+			
+			$this->load->view('vue_items');
+		}
+
+	
 	}
 ?>
