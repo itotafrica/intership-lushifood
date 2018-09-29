@@ -10,7 +10,7 @@
 
 	<?php foreach($get_items as $value): ?>
 
-	<p> <?php echo $value->nom; ?> </p>
+	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu; ?> </p>
 
 	<?php endforeach ?>
 </body>
