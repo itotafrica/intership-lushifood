@@ -42,6 +42,8 @@
 			$this->load->view('vue_items');
 		}
 
-	
+		public function update_items(){
+			
+		}
 	}
 ?>
