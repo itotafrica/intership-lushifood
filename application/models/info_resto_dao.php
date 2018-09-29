@@ -17,7 +17,7 @@
 			return $requete;
 		}
 
-		public function set_items($nom, $description, $pu){
+		public function set_items($nom, $description, $pu, $idcot, $idresto, $image){
 
 			$this->db->set('nom', $nom);
 			$this->db->set('description', $description);
