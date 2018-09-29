@@ -11,16 +11,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('panier');
 	}
-	public function link_detail(){
+	public function pagedetailplat(){
 		$this->load->view('product-detail');
 	}
-	public function link_about(){
+	public function pageabout(){
 		$this->load->view('about');
 	}
-	public function link_login(){
+	public function pagelogin(){
 		$this->load->view('login');
 	}
-	public function link_restau(){
+	public function pagerestau(){
 		$this->load->view('restaurant-page');
 	}
 }
