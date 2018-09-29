@@ -28,7 +28,7 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<h4><a href="restaurant-page.html">Accueil</a></h4>
+								<h4><a href="<?php echo base_url('welcome/index');?>">Accueil</a></h4>
 							</li>
 
 							<li>
@@ -74,17 +74,11 @@
 		</div>
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
-
 					<li class="item-menu-mobile">
-						<a href="">Accueil</a>
-					</li class="item-menu-mobile">
-
+						<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
+					</li>
 					<li class="item-menu-mobile">
 						<a href="<?php echo base_url('welcome/link_about');?>">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="">Contact</a>
 					</li>
 				</ul>
 			</nav>
