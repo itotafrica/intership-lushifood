@@ -34,8 +34,20 @@
 			return $requete;
 		}
 
-		public function update(){
-			
+		public function update($id, $nom=null, $description=null, $pu=null){
+
+			if ($nom == null AND $description == null AND $pu == null){
+				return false;
+			}
+			else{
+
+				$this->db->set('nom', $nom);
+				$this->db->set('description', $description);
+				$this->db->set('pu', $pu);
+				
+				return $this->db->where('id', (int)id)
+				->update($this->table_items);
+			}
 		}
 	}
 ?>
