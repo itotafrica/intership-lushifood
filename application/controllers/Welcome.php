@@ -23,4 +23,7 @@ class Welcome extends CI_Controller {
 	public function pagerestau(){
 		$this->load->view('restaurant-page');
 	}
+	public function pagepanier(){
+		$rhis->load->view('panier');
+	}
 }
