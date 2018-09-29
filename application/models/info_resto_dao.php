@@ -22,7 +22,7 @@
 			$this->db->set('description', $description);
 			$this->db->set('pu', $pu);
 
-			$requete = $this->db->insert("items");
+			return $this->db->insert("items");
 		}
 	}
 ?>
