@@ -33,5 +33,9 @@
 				->result();
 			return $requete;
 		}
+
+		public function update(){
+			
+		}
 	}
 ?>
