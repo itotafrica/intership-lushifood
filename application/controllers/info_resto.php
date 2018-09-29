@@ -6,6 +6,7 @@
 			parent::__construct();
 
 			$this->load->database();
+			
 		}
 
 		public function index(){
@@ -15,7 +16,7 @@
 
 		public function info(){
 
-			$this->load->model("info_resto_dao", "info_dao");
+			
 
 			$id = $this->input->get('id');
 
@@ -28,9 +29,9 @@
 
 			$this->load->model("info_resto_dao", "info_dao");
 			
-			$nom = $this->input->get('nom');
-			$description = $this->input->get('description');
-			$pu = $this->input->get('pu');
+			$nom = $this->input->post('nom');
+			$description = $this->input->post('description');
+			$pu = $this->input->post('pu');
 
 			$data['items'] = $this->info_dao->set_items($nom, $description, $pu);
 			
