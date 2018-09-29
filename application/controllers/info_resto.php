@@ -6,6 +6,7 @@
 			parent::__construct();
 
 			$this->load->database();
+			$this->load->model("info_resto_dao", "info_dao");
 			
 		}
 
@@ -16,8 +17,6 @@
 
 		public function info(){
 
-			
-
 			$id = $this->input->get('id');
 
 			$data["info_resto"] = $this->info_dao->info_resto($id);
@@ -26,8 +25,6 @@
 		}
 		
 		public function add_items(){
-
-			$this->load->model("info_resto_dao", "info_dao");
 			
 			$nom = $this->input->post('nom');
 			$description = $this->input->post('description');
