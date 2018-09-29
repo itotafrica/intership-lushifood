@@ -133,10 +133,13 @@ textarea {
 							</div>
 						</div>
 					</div>
+					<form action="" post="">
+					<?php echo form_open('index.php/Welcome/message')?>
 					<textarea type="text" placeholder="Entrez un message" name="msg" required></textarea>
 					<div id ="send">
  						<a href =""><img src =" <?php echo base_url('assets\images\send.png');?>" width ="100%"></a>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>
