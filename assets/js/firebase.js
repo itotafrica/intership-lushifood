@@ -1,14 +1,17 @@
 
 function login(){
-    var mail = document.getElementById("ip-email").value;
-    var pwd = document.getElementById("ip-pwd").value;
-    
-    firebase.auth().signInWithEmailAndPassword(mail, pwd).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
+    var mail = document.getElementById("ip_email").value;
+    var pwd = document.getElementById("ip_pwd").value;
 
-    window.alert("Error : " + errorMessage);
-});
+     /* firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+        } else {
+          // No user is signed in.
+        }
+      });*/
+
+      
+      
+
 }
