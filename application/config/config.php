@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/';
+$config['base_url'] = 'http://localhost/Lushi-Food-Web/';
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +64,11 @@ $config['uri_protocol']	= 'REQUEST_URI';
 |
 | https://codeigniter.com/user_guide/general/urls.html
 */
+<<<<<<< HEAD
 $config['url_suffix'] = '.php';
+=======
+$config['url_suffix'] = '.html';
+>>>>>>> 942bf60794cceea5e5b6df6cdff9402a91235709
 
 /*
 |--------------------------------------------------------------------------
