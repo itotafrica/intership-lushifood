@@ -134,11 +134,12 @@ textarea {
 						</div>
 					</div>
 					<form action="" post="">
-					<?php echo form_open('index.php/Welcome/message')?>
+					<?php echo form_open('index.php/Welcome/message?idclient=1&idresto=1')?>
 					<textarea type="text" placeholder="Entrez un message" name="msg" required></textarea>
 					<div id ="send">
  						<a href =""><img src =" <?php echo base_url('assets\images\send.png');?>" width ="100%"></a>
 					</div>
+					<input type="submit" value="Submit" class="submit">
 					</form>
 				</div>
 			</div>
