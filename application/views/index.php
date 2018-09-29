@@ -255,6 +255,7 @@
     </div>
 
 
+    <script src=""<?php echo base_url('assets\js\firebase.js');?>"></script>
     <script src="<?php echo base_url('assets\js\vendor\jquery-3.2.1.min.js');?>"></script>
     <script src="<?php echo base_url('assets\js\vendor\popper.min.js');?>"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
