@@ -22,6 +22,8 @@
 			$this->db->set('nom', $nom);
 			$this->db->set('description', $description);
 			$this->db->set('pu', $pu);
+			$this->db->set('idcot', $pu);
+			$this->db->set('idresto', $pu);
 
 			return $this->db->insert($this->table_items);
 		}
