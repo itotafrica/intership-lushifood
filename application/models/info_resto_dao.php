@@ -25,5 +25,9 @@
 
 			return $this->db->insert($this->table_items);
 		}
+
+		public function get_items(){
+			
+		}
 	}
 ?>
