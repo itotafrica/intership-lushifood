@@ -31,7 +31,7 @@
 			$description = $this->input->post('description');
 			$pu = $this->input->post('pu');
 		
-			$data['set_items'] = $this->info_resto_dao->set_items($nom, $description, $pu);
+			$data['get_items'] = $this->info_resto_dao->get_items($nom, $description, $pu);
 			$this->load->view('vue_items_info', $data);
 			
 
