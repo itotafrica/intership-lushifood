@@ -64,11 +64,7 @@ $config['uri_protocol']	= 'REQUEST_URI';
 |
 | https://codeigniter.com/user_guide/general/urls.html
 */
-<<<<<<< HEAD
-$config['url_suffix'] = '.php';
-=======
 $config['url_suffix'] = '.html';
->>>>>>> 942bf60794cceea5e5b6df6cdff9402a91235709
 
 /*
 |--------------------------------------------------------------------------
