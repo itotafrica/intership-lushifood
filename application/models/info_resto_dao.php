@@ -27,7 +27,11 @@
 		}
 
 		public function get_items(){
-			
+
+			$requete = $this->db->select(Array('nom','description','pu','idcot'))
+				->get($this->table_items)
+				->result();
+			return $requete;
 		}
 	}
 ?>
