@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<?php foreach($set_items as $value): ?>
+	<?php foreach($get_items as $value): ?>
 
 	<p> <?php echo $value->nom; ?> </p>
 
