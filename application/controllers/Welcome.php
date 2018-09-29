@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('panier');
 	}
 	public function pagedetailplat(){
 		$this->load->view('product-detail');
