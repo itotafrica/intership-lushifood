@@ -30,11 +30,11 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="<?php// echo base_url('welcome/home');?>"">Accueil</a>
+								<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
 							</li>
 
 							<li>
-								<a href="<?php// echo base_url('welcome/apropos'); ?>">About</a>
+								<a href="<?php echo base_url('welcome/pageapropos'); ?>">About</a>
 							</li>
 						</ul>
 					</nav>
@@ -81,25 +81,6 @@
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
 				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							payez et commandez des articles.
-						</span>
-					</li>
-
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								elviskankola1@gmail.com
-							</span>
-
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-								</select>
-							</div>
-						</div>
-					</li>
 
 					<li class="item-topbar-mobile p-l-10">
 						<div class="topbar-social-mobile">
@@ -112,18 +93,12 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="<?php //echo base_url('welcome/home');?>">Accueil</a>
+						<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
 					</li class="item-menu-mobile">
-					<li class="item-menu-mobile">
-						<a href="<?php //echo base_url('welcome/produicts');?>">market</a>
-					</li>
+					
 
 					<li class="item-menu-mobile">
-						<a href="<?php //echo base_url('welcome/apropos');?>">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="<?php //echo base_url('welcome/contact');?>">Contact</a>
+						<a href="<?php echo base_url('welcome/pageapropos');?>">About</a>
 					</li>
 				</ul>
 			</nav>
