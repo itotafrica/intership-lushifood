@@ -32,11 +32,7 @@
 							</li>
 
 							<li>
-								<a href="<?php echo base_url('welcome/link_about');?>">A propos</a>
-							</li>
-
-							<li>
-								<a href="">Contact</a>
+								<a href="<?php echo base_url('welcome/pageapropos');?>">A propos</a>
 							</li>
 						</ul>
 					</nav>
@@ -78,7 +74,7 @@
 						<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
 					</li>
 					<li class="item-menu-mobile">
-						<a href="<?php echo base_url('welcome/link_about');?>">About</a>
+						<a href="<?php echo base_url('welcome/pageapropos');?>">About</a>
 					</li>
 				</ul>
 			</nav>
@@ -98,13 +94,27 @@
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<h4 class="m-text14 p-b-32">
-							NOTATION RESTAURANT <img src="<?php echo base_url('assets\images\icons\favicon.ico');?>" width="10%">
+							COTATION RESTAURANT <img src="<?php echo base_url('assets\images\icons\favicon.ico');?>" width="10%">
 						</h4>
 						<div class="filter-color p-t-22 p-b-50 bo3">
 							<img src="<?php echo base_url('assets/images/et1.png'); ?>" width="20%">
                             <img src="<?php echo base_url('assets/images/et1.png'); ?>" width="20%">
                             <img src="<?php echo base_url('assets/images/et1.png'); ?>" width="20%">
 							<img src="<?php echo base_url('assets/images/et1.png'); ?>" width="20%">
+
+						</div>
+						<h4 class="m-text14 p-b-32">
+							ADRESSE
+						</h4>
+						<div class="filter-color p-t-22 p-b-50 bo3">
+							INFO....
+
+						</div>
+						<h4 class="m-text14 p-b-32">
+							SPECIALISATION
+						</h4>
+						<div class="filter-color p-t-22 p-b-50 bo3">
+							PLAT ITALIEN
 
 						</div>
 					</div>
