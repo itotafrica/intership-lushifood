@@ -50,16 +50,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
-			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
 				<H1><b style="color: red;">U</b>NIQUE</H1>
 			</a>
-
-			<!-- Button show menu -->
 			<div class="btn-show-menu">
-				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
 
 					<span class="linedivide2"></span>
