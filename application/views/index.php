@@ -257,6 +257,19 @@
 
     <script src="<?php echo base_url('assets\js\vendor\jquery-3.2.1.min.js');?>"></script>
     <script src="<?php echo base_url('assets\js\vendor\popper.min.js');?>"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAtttiOl9i-wGSK0QFUwf9H8cQrOhF6bxg",
+            authDomain: "glou-web-login.firebaseapp.com",
+            databaseURL: "https://glou-web-login.firebaseio.com",
+            projectId: "glou-web-login",
+            storageBucket: "glou-web-login.appspot.com",
+            messagingSenderId: "97694971563"
+        };
+        firebase.initializeApp(config);
+        </script>
 </body>
 
 </html>
