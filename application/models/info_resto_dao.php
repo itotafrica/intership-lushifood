@@ -2,11 +2,12 @@
 	class Info_resto_dao extends CI_Model{
 
 		private $table = "restaurant";
+		private $table_items = "items";
 
-		public $nom;
-		public $description;
-		public $pu; 
-
+		function __construct(){
+			parent::__construct();
+		}
+		
 		public function info_resto($id){
 
 			$requete = $this->db->select(Array('nom','adresse','phone','mail'))
@@ -22,7 +23,7 @@
 			$this->db->set('description', $description);
 			$this->db->set('pu', $pu);
 
-			return $this->db->insert("items");
+			return $this->db->insert($this->table_items);
 		}
 	}
 ?>
