@@ -77,7 +77,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- Menu Mobile -->
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
 				<ul class="main-menu">
