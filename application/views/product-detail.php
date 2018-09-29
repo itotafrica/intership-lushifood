@@ -120,10 +120,7 @@
 				<p class="s-text8 p-t-10">
 					ce produit est d'une qualite legale.
 				</p>
-
-				<!--  -->
 				<div class="p-t-33 p-b-60">
-
 					<form method="post">
 						<div class="flex-m flex-w p-b-10">
 						<div class="s-text15 w-size15 t-center">
