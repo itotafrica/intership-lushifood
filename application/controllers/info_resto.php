@@ -57,12 +57,10 @@
 					}
 				}
 
-				$data = array('upload_data' => $this->upload->data());
-				$this->load->view('vue_items_info', $data);
+				$this->info_resto_dao->set_items($nom, $description, $pu, $idcot, $idresto, $image);
+				$this->load->view('vue_items_info');
 			}
-
 			//$data['get_items'] = $this->info_resto_dao->get_items($nom, $description, $pu, $idcot, $idresto, $image);
-			
 		}
 
 		public function page(){
