@@ -72,8 +72,13 @@
 		}
 
 /*================================================================================================================*/
-		public function info_items($id){
+		public function info_items(){
 
+			//$id = $this->input->get('id');
+			$id = 20;
+
+			$data["info_items"] = $this->resto_dao->get_items($id);
+			$this->load->view("vue_items_info", $data);
 
 		}
 
