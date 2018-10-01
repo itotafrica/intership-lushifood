@@ -21,14 +21,15 @@
     			var lat= position.coords.latitude;
     			var long=position.coords.longitude
     			var macarte = null;
-                macarte = L.map('map').setView([lat, lon], 11);
+                macarte = L.map('map').setView([lat, long], 15);
                 // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
                 L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
                     // Il est toujours bien de laisser le lien vers la source des données
                     attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
                     minZoom: 1,
                     maxZoom: 20
-                }).addTo(macarte);
+				}).addTo(macarte);
+				var marker = L.marker([lat, long]).addTo(macarte);
             }
 			getLocation();
 			
