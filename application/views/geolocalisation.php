@@ -9,8 +9,10 @@
             crossorigin=""></script>
             <script type="text/javascript">
 			// On initialise la latitude et la longitude de Paris (centre de la carte)
-			var lat = -11.6608900;
-			var lon = 27.4793800;
+			var userlat;
+			var userlon;
+			var lat = userlat;
+			var lon = userlat;
 			var macarte = null;
 			// Fonction d'initialisation de la carte
 			function initMap() {
