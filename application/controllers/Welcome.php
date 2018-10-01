@@ -5,6 +5,7 @@ class Welcome extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
+		$this->load->model('messagerieModel');
 	}
 	
 	public function index()
@@ -31,16 +32,16 @@ class Welcome extends CI_Controller {
 	public function chat(){
 		$this->load->view('chat');
 	}
-	
+
 	public function message(){
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
-		var_dump($message);die;
+		//var_dump($message);die;
 		$data["msg"]=$message;
 		$data["id_client"]=$idclient;
 		$data["id_rest"]=$idresto;
-		$data["date_conv"]=data("y-m-d h:i:sa");
+		$data["date_conv"]=date("y-m-d h:i:sa");
 		$this->messagerieModel->inserer($data);
 		$this->load->view('restaurant-page');
 	}
