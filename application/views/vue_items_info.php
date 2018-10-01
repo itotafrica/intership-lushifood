@@ -10,7 +10,7 @@
 
 	<?php foreach($info_items as $value): ?>
 
-	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu  ?> </p>
+	<p> <?php echo $value->nom .' '.$value->description .' '.$value->prix_unit  ?> </p>
 	<img src="<?php echo base_url($value->image); ?>">
 	<?php endforeach ?>
 </body>
