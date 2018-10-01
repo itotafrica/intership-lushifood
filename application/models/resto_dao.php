@@ -19,7 +19,7 @@
 		}
 
 /*======================================================================================================================*/
-		public function set_items($nom, $description, $pu, $idcot, $idresto, $path){
+		public function set_items($nom, $description, $prix_unit, $id_categorie, $id_resto, $path){
 
 			$this->db->set('nom', $nom);
 			$this->db->set('description', $description);
