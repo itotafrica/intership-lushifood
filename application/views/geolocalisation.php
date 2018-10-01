@@ -17,7 +17,10 @@
         			x.innerHTML = "Geolocation is not supported by this browser.";
     			}
 			}
-			var macarte = null;
+			function showPosition(position) {
+    			var lat= position.coords.latitude;
+    			var long=position.coords.longitude
+    			var macarte = null;
 			// Fonction d'initialisation de la carte
 			function initMap() {
 				// Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
