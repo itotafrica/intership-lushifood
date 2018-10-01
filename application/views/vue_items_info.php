@@ -10,8 +10,8 @@
 
 	<?php foreach($info_items as $value): ?>
 
-	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu .' '.$value->image; ?> </p>
-	<img src="<?php $value->image; ?>" alt="">
+	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu  ?> </p>
+	<img src="<?php echo base_url($value->image); ?>">
 	<?php endforeach ?>
 </body>
 </html>
