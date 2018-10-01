@@ -35,5 +35,10 @@ class Welcome extends CI_Controller {
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
+		$data["msg"]=$message;
+		$data["id_client"]=$idclient;
+		$data["id_rest"]=$idresto;
+		$data["date_conv"]=data("y-m-d h:i:sa");
+		$this->messagerieModel->inserer($data);
 	}
 }
