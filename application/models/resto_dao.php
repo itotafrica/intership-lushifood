@@ -35,6 +35,7 @@
 		public function get_items($id){
 
 			$requete = $this->db->select(Array('nom','description','pu','image'))
+				->WHERE('id',(int)$id)
 				->get($this->table_items)
 				->result();
 			return $requete;
