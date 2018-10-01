@@ -133,15 +133,14 @@ textarea {
 							</div>
 						</div>
 					</div>
-					<form action="" post="">
-					<?php echo form_open('index.php/Welcome/message')?>
+					<form action="<?php echo site_url('welcome/message');?>" method="post">
 					<textarea type="text" placeholder="Entrez un message" name="msg" required></textarea>
 					<input type="hidden" value="1" name="idclient">
 					<input type="hidden" value="1" name="idresto">
 					<div id ="send">
  						<a href =""><img src =" <?php echo base_url('assets\images\send.png');?>" width ="100%"></a>
 					</div>
-					<input type="submit" value="Submit" class="submit">
+					<input type="submit" value="Submit" class="">
 					</form>
 				</div>
 			</div>
