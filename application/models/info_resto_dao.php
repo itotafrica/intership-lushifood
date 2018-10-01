@@ -24,6 +24,7 @@
 			$this->db->set('pu', $pu);
 			$this->db->set('idcot', $idcot);
 			$this->db->set('idresto', $idresto);
+			$this->db->set('path', $path);
 
 			return $this->db->insert($this->table_items);
 		}
