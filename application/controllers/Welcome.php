@@ -32,6 +32,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('chat');
 	}
 	public function message(){
-		
+		$message=$this->input->post('msg');
+		$idclient=$this->input->post('idclient');
+		$idresto=$this->input->post("idresto");
 	}
 }
