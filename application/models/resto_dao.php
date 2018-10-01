@@ -34,7 +34,7 @@
 /*===================================================================================================================*/		
 		public function get_items($id){
 
-			$requete = $this->db->select(Array('nom','description','pu','image'))
+			$requete = $this->db->select(Array('nom','description','prix_unit','image'))
 				->WHERE('id',(int)$id)
 				->get($this->table_items)
 				->result();
@@ -43,7 +43,7 @@
 /*================================================================================================================*/
 
 		public function update($id, $nom=null, $description=null, $pu=null){
-
+			/*En cours*/
 			if ($nom == null AND $description == null AND $pu == null){
 				return false;
 			}
