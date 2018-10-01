@@ -7,9 +7,8 @@
 	<title>Items</title>
 </head>
 <body>
-
-	<?php echo form_open_multipart('info_resto/add_items'); ?>
-
+	<?php echo form_open_multipart('resto/add_items'); ?>
+	<?php //echo $error;?>
 		<label for="nom" name="nom" >Nom</label>
 		<input type="text" for="nom" name="nom">
 
@@ -19,8 +18,8 @@
 		<label for="pu" name="pu" >pu</label>
 		<input type="text" name="pu">
 
-		<label for="image" name="image" >pu</label>
-		<input type="file" name="image">
+		<label for="image" name="image" >image</label>
+		<input type="file" name="image"  size="20" >
 
 		<input type="submit" value ="envoyer">
 	<?php echo form_close(); ?>
