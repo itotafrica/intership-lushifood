@@ -40,6 +40,7 @@
 				->result();
 			return $requete;
 		}
+/*================================================================================================================*/
 
 		public function update($id, $nom=null, $description=null, $pu=null){
 
