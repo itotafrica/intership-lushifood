@@ -17,13 +17,13 @@
 			return $requete;
 		}
 
-		public function set_items($nom, $description, $pu, $idcot, $idresto, $image){
+		public function set_items($nom, $description, $pu, $idcot, $idresto, $path){
 
 			$this->db->set('nom', $nom);
 			$this->db->set('description', $description);
 			$this->db->set('pu', $pu);
-			$this->db->set('idcot', $pu);
-			$this->db->set('idresto', $pu);
+			$this->db->set('idcot', $idcot);
+			$this->db->set('idresto', $idresto);
 
 			return $this->db->insert($this->table_items);
 		}
