@@ -13,14 +13,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\util.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\main.css');?>">
 <!--===============================================================================================-->
-	<!--<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
-
-	<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>-->
-
-	<script src="<?php echo base_url('assets\js\firebase.js');?>"></script>
 <!--===============================================================================================-->
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
-        <script>
+ <script>
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyAtttiOl9i-wGSK0QFUwf9H8cQrOhF6bxg",
@@ -31,17 +26,16 @@
             messagingSenderId: "97694971563"
         };
 		firebase.initializeApp(config);
-
-		firebase.auth().createUserWithEmailAndPassword("gaelmmgmpoyi@gmail.com", "pwd").catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-     	 });
-        </script>
 		
+		function login(){
+			firebase.auth().createUserWithEmailAndPassword("gaelmmg@gmail.fr", "password").catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
 
-
+            alert(errorMessage);
+        	});
+		}
+    </script>
 </head>
 <body >
 	
