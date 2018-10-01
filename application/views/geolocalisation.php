@@ -9,10 +9,14 @@
             crossorigin=""></script>
             <script type="text/javascript">
 			// On initialise la latitude et la longitude de Paris (centre de la carte)
-			var userlat;
-			var userlon;
-			var lat = userlat;
-			var lon = userlat;
+			var x = document.getElementById("demo");
+			function getLocation() {
+    			if (navigator.geolocation) {
+        			navigator.geolocation.getCurrentPosition(showPosition);
+    			} else {
+        			x.innerHTML = "Geolocation is not supported by this browser.";
+    			}
+			}
 			var macarte = null;
 			// Fonction d'initialisation de la carte
 			function initMap() {
