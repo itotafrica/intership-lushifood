@@ -7,8 +7,7 @@
 
 			$this->load->database();
 			$this->load->model("info_resto_dao");
-			$this->load->library('form_validation');
-			
+			$this->load->helper(array('form', 'url'));
 		}
 
 		public function index(){
@@ -28,18 +27,18 @@
 		public function add_items(){
 			$idcot = 1;
 			$idresto = 1;
-			$config['upload_path'] = '.assets/uploads';
-			$config['allowed_types'] = 'jpg|JPG|PNG|png';
-			$config['max_size'] = '500';
-			$config['max_width'] = '1024';
-			$config['max_height'] = '768';
+			$config['upload_path']          = './uploads/';
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
 
 			$this->load->library('upload', $config);
 
 			if( ! $this->upload->do_upload('image')){
 
 				$error = array('error' => $this->upload->display_errors() );
-				$this->load->view('vue_items_info', $error);
+				$this->load->view('vue_items', $error);
 			}
 			else
 			{
@@ -51,8 +50,10 @@
 					}
 				}
 				$data['upload_data'] = $this->upload->data(); 
-				$this->upload_dao->set_path($nom, $description, $pu, $idcot, $idresto, $path);
-				//$this->load->view('', $data);
+				var_dump(data);
+				die();
+				$this->info_resto_dao->set_items($nom, $description, $pu, $idcot, $idresto, $path);
+				$this->load->view('vue_items_info', $data);
 			}
 		
 		}
