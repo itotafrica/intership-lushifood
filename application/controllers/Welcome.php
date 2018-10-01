@@ -5,7 +5,7 @@ class Welcome extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('messagerieModel');
+		
 	}
 	
 	public function index()
@@ -34,6 +34,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function message(){
+		$this->load->model('messagerieModel');
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
