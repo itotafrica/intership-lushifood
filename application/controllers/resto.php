@@ -55,11 +55,11 @@
 				$nom =  $this->input->post('nom');
 				$description =  $this->input->post('description');
 				$pu = $this->input->post('pu');
-				$idcot = 1;
-				$idresto = 1;
+				$id_categorie =$this->input->get('id_categorie');
+				$id_resto = $this->input->get('id_resto');
 
 				$data['upload_data'] = $this->upload->data(); 
-				$this->resto_dao->set_items($nom, $description, $pu, $idcot, $idresto, $path);
+				$this->resto_dao->set_items($nom, $description, $pu, $id_categorie, $id_resto, $path);
 				$this->load->view('vue_items_info', $data);
 			}
 		
@@ -74,9 +74,7 @@
 /*================================================================================================================*/
 		public function info_items(){
 
-			//$id = $this->input->get('id');
-			$id = 20;
-
+			$id = $this->input->get('id');
 			$data["info_items"] = $this->resto_dao->get_items($id);
 			$this->load->view("vue_items_info", $data);
 
@@ -85,7 +83,7 @@
 /*===============================================================================================================*/		
 		public function update_items(){
 
-			
+			/*En cours*/
 		}
 	}
 ?>
