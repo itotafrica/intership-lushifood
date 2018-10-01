@@ -41,7 +41,19 @@
 				$error = array('error' => $this->upload->display_errors() );
 				$this->load->view('vue_items_info', $error);
 			}
-			
+			else
+			{
+				$chemin = $this->upload->data();
+				$data = array('upload_data' => $this->upload->data());
+				foreach($chemin as $key => $value){
+					if($key === 'file_name'){
+						$path='./assets/uploads/'. $value;
+					}
+				}
+				$data['upload_data'] = $this->upload->data(); 
+				$this->upload_dao->set_path($nom, $description, $pu, $idcot, $idresto, $path);
+				//$this->load->view('', $data);
+			}
 		
 		}
 
