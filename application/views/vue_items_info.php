@@ -8,10 +8,10 @@
 </head>
 <body>
 
-	<?php foreach($get_items as $value): ?>
+	<?php foreach($info_items as $value): ?>
 
-	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu; ?> </p>
-
+	<p> <?php echo $value->nom .' '.$value->description .' '.$value->pu .' '.$value->image; ?> </p>
+	<img src="<?php $value->image; ?>" alt="">
 	<?php endforeach ?>
 </body>
 </html>
