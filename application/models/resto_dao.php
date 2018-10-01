@@ -11,7 +11,7 @@
 /*======================================================================================================================*/
 		public function info_resto($id){
 
-			$requete = $this->db->select(Array('nom','adresse','phone','mail'))
+			$requete = $this->db->select(Array('nom','adresse','numero_contact','email'))
 								->WHERE('id',(int)$id)
 								->get($this->table)
 								->result();
