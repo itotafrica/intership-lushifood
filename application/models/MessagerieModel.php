@@ -4,10 +4,9 @@ class MessagerieModel extends CI_Model{
     {
         parent::__construct();
     }
-    function inserer($data)
+    function insererConversation($data)
     {
         $this->db->insert("conversation",$data);
-
     }
 }
 ?>
