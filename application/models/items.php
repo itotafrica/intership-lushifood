@@ -9,8 +9,9 @@ class items extends CI_models
 		parent:: __construct();
 
 		$this->load->database();
-
-		public function afficher_items($id){
+	}
+	
+	public function afficher_items($id){
 _
 			$query = $this->db->select(Array('nom','description','prix','images'))
 								->WHERE('id',(int)$id)
@@ -25,10 +26,10 @@ _
 	}
 
 
-
+	// en cours...
 	public function supprimer_item($id_item)
 	{
-
+		
 	}
 
 	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
