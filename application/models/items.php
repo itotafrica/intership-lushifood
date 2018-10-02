@@ -37,7 +37,7 @@ class items extends CI_models
 
 	}
 
-	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
+	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $images=NULL){
 	
 			if ($nom == null AND $description == null AND $pu == null){
 				return false;
