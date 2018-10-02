@@ -58,6 +58,7 @@ class Welcome extends CI_Controller {
 					"date_msg"=>date("y-m-d h:i:sa"),
 					"id_conv"=>$idconv
 				);
+				$this->messagerieModel->insererMessage($data);
 			}
 			else
 			{
