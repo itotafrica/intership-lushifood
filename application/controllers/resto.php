@@ -83,7 +83,13 @@
 /*===============================================================================================================*/		
 		public function update_items(){
 
+			$nom = $this->input->get('nom');
+			$description = $this->input->get('description');
+			$pu = $this->input->get('prix_unit');
+			$pu = $this->input->get('image');
 
+			$this->resto_dao->set_items($nom, $description, $pu,  $path);
+			$this->load->view('vue_items_info', $data);
 
 		}
 	}
