@@ -17,7 +17,7 @@ class items extends CI_models
 								->WHERE('id',(int)$id)
 								->get($this->table)
 								->result();
-			return $requete;
+			return $query;
 		}
 
 		
