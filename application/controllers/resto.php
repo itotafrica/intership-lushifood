@@ -128,8 +128,7 @@
 
 		public function delete_items()
 		{
-			//$id = $this->input->get('id');
-			$id = 10;
+			$id = $this->input->get('id');
 			$this->resto_dao->delete($id);
 			$this->load->view('vue_items');
 		}
