@@ -3,7 +3,8 @@
       Doctrine\ORM\Configuration,
       Doctrine\ORM\EntityManager,
       Doctrine\Common\Cache\ArrayCache,
-      Doctrine\DBAL\Logging\EchoSQLLogger;
+      Doctrine\DBAL\Logging\EchoSQLLogger,
+      Doctrine\Common\Proxy\Proxy;
 
   class Doctrine {
 
@@ -33,7 +34,8 @@
 
       $config->setQueryCacheImpl($cache);
 
-      $config->setProxyDir(APPPATH.'/models/proxies');
+      $config->setProxyDir(APPPATH.'models/proxies');
+      $config->setProxyNamespace('Proxies');
 
       // Set up logger
       $logger = new EchoSQLLogger;

@@ -1,5 +1,5 @@
 <?php
-namespace Doctrine\Common\Proxy;
+namespace Doctrine\Common\Proxy\Proxy;
 
 use Closure;
 use Doctrine\Common\Persistence\Proxy as BaseProxy;

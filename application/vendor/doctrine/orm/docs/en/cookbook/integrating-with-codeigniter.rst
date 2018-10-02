@@ -82,7 +82,7 @@ Customize it to your needs.
         $config->setQueryCacheImpl($cache);
     
         // Proxy configuration
-        $config->setProxyDir(APPPATH.'/models/proxies');
+        $config->setProxyDir(APPPATH.'models/proxies');
         $config->setProxyNamespace('Proxies');
     
         // Set up logger
