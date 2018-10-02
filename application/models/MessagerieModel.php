@@ -10,7 +10,7 @@ class MessagerieModel extends CI_Model{
     }
     function recupererConversation()
     {
-        $this->db->get("conversation")->result_array();
+       return $this->db->get("conversation")->result_array();
     }
 }
 ?>
