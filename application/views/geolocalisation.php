@@ -32,6 +32,9 @@
 				var marker = L.marker([lat, long]).addTo(macarte);
 			}
 			function showError(error) {
+				switch(error.code) {
+                case error.PERMISSION_DENIED:
+                alert('User denied the request for Geolocation.')
 			getLocation();
 			
 		</script>
