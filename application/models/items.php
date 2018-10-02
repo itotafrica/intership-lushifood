@@ -65,16 +65,20 @@ class items extends CI_models
 
 	}
 
-	public function modifier_item($nom, $description, $prix_unit, $id_categorie, $id_resto, $path)
-	{
+	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
+	
+			if ($nom == null AND $description == null AND $pu == null){
+				return false;
+			}
+			else{
 
-			$this->db->set('nom', $nom);
-			$this->db->set('description', $description);
-			$this->db->set('pu', $prix_unit);
-			$this->db->set('idcot', $id_cot);
-			$this->db->set('idresto', $id_resto);
-			$this->db->set('image', $path);
-
+				$this->db->set('nom', $nom);
+				$this->db->set('description', $description);
+				$this->db->set('pu', $prix_unitaire);
+				
+				return $this->db->where('id', (int)id)
+				->update($this->table_items);
+			}
 			return $this->db->insert($this->table_items)
 	}
 	/*function returnDescriptionDeCategorie ($id) {
