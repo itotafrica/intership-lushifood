@@ -41,7 +41,6 @@ class Welcome extends CI_Controller {
 	public function message()
 	{
 
-		
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
@@ -59,6 +58,8 @@ class Welcome extends CI_Controller {
 					"id_conv"=>$idconv
 				);
 				$this->messagerieModel->insererMessage($data);
+				$this->messagerieModel->recuperMessage($idconv);
+
 			}
 			else
 			{
