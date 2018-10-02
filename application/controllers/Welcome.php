@@ -9,26 +9,21 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('index');
-	}
-
-	public function link_detail(){
-		$this->load->view('product-detail');
-	}
-
-	public function link_about(){
-		$this->load->view('about');
-	}
-
-	public function link_login(){
-		$this->load->view('login');
-	}
-	
-	public function link_restau(){
 		$this->load->view('restaurant-page');
 	}
-	
-	public function chat(){
-		$this->load->view('chat');
+	public function pagedetailplat(){
+		$this->load->view('product-detail');
 	}
+	public function pageapropos(){
+		$this->load->view('about');
+	}
+	public function pagelogin(){
+		$this->load->view('login');
+	}
+	public function pagerestau(){
+		$this->load->view('restaurant-page');
+	}
+	public function pagepanier(){
+		$rhis->load->view('panier');
+  }
 }
