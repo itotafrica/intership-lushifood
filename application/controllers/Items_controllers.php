@@ -7,8 +7,8 @@
             parent :: __construct();
 
             $this->load->database();
-            $this->load->model("supprimer_item");
-            $this ->load->model("modifier_item");
+            $this->load->model("items");
+            $this ->load->model("restaurant");
 			$this->load->helper(array('form', 'url'));
 
         }
