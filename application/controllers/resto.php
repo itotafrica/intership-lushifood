@@ -128,7 +128,8 @@
 
 		public function delete_items()
 		{
-			
+			return $this->db->where('id', (int)id)
+							->delete();
 		}
 		
 	}
