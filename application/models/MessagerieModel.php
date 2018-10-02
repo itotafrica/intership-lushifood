@@ -8,5 +8,9 @@ class MessagerieModel extends CI_Model{
     {
         $this->db->insert("conversation",$data);
     }
+    function recupererConversation()
+    {
+        $this->db->get("conversation")->result_array();
+    }
 }
 ?>
