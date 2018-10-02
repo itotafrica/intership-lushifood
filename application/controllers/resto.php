@@ -112,7 +112,7 @@
 				$pu = $this->input->get('prix_unit');
 				$pu = $this->input->get('image');*/
 
-				$nom = 'japhet';
+				$nom = 'Gael';
 				$description = 'muntu';
 				$pu = 6.5;
 
