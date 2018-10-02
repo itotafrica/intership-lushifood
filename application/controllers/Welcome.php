@@ -58,8 +58,9 @@ class Welcome extends CI_Controller {
 					"id_conv"=>$idconv
 				);
 				$this->messagerieModel->insererMessage($data);
-				$this->messagerieModel->recuperMessage($idconv);
-
+				$messageRecuperer=$this->messagerieModel->recupererMessage($idconv);
+				$this->load->view('chat',$messageRecuperer);
+				//var_dump($messageRecuperer);die;
 			}
 			else
 			{
@@ -70,7 +71,7 @@ class Welcome extends CI_Controller {
 				$this->messagerieModel->insererConversation($data);
 			}
 		}
-		$this->load->view('restaurant-page');
+		//$this->load->view('restaurant-page');
 	}
 }
 
