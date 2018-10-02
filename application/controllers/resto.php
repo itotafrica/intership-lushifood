@@ -83,12 +83,36 @@
 /*===============================================================================================================*/		
 		public function update_items(){
 
+			$config['upload_path']          = './assets/uploads/';
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
+
+			$this->load->library('upload', $config);
+			
+			if( ! $this->upload->do_upload('image')){
+			
+				$error = array('error' => $this->upload->display_errors() );
+				$this->load->view('vue_items', $error);
+			}
+			else
+			{
+				$chemin = $this->upload->data();
+				$data = array('upload_data' => $this->upload->data());
+				foreach($chemin as $key => $value){
+					if($key === 'file_name'){
+					$path='./assets/uploads/'. $value;
+				}
+			}
+
 			$nom = $this->input->get('nom');
 			$description = $this->input->get('description');
 			$pu = $this->input->get('prix_unit');
 			$pu = $this->input->get('image');
 
-			$this->resto_dao->set_items($nom, $description, $pu,  $path);
+			$data['upload_data'] = $this->upload->data(); 
+			$this->resto_dao->update($nom, $description, $pu,  $path);
 			$this->load->view('vue_items_info', $data);
 
 		}
