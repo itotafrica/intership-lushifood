@@ -38,6 +38,9 @@
 				break; 
                 case error.POSITION_UNAVAILABLE:
                 alert('Location information is unavailable.')
+					break;
+				case error.TIMEOUT:
+                alert('The request to get user location timed out.')
                     break;
 			getLocation();
 			
