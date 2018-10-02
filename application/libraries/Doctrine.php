@@ -1,9 +1,9 @@
 <?php
-use Doctrine\Common\ClassLoader,
-    Doctrine\ORM\Configuration,
-    Doctrine\ORM\EntityManager,
-    Doctrine\Common\Cache\ArrayCache,
-    Doctrine\DBAL\Logging\EchoSQLLogger;
+use doctrine\common\ClassLoader,
+    doctrine\ORM\Configuration,
+    doctrine\ORM\EntityManager,
+    doctrine\Common\Cache\ArrayCache,
+    doctrine\DBAL\Logging\EchoSQLLogger;
 
 class Doctrine {
 
