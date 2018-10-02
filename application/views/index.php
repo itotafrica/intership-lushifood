@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/head_home.css" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/chat.css" />
+
     
 
 
