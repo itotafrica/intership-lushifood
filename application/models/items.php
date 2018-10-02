@@ -54,11 +54,7 @@ class items extends CI_models
 			return $this->db->insert($this->table_items);
 	}
 	
+	
         
         
-        
-        
-
-
-
 ?>
