@@ -6,6 +6,11 @@
 
             parent :: __construct();
 
+            $this->load->database();
+            $this->load->model("supprimer_item");
+            $this ->load->model("modifier_item");
+			$this->load->helper(array('form', 'url'));
+
         }
 
 
