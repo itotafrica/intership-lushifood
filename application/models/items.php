@@ -51,7 +51,7 @@ class items extends CI_models
 				return $this->db->where('id', (int)id)
 				->update($this->table_items);
 			}
-			return $this->db->insert($this->table_items)
+			return $this->db->insert($this->table_items);
 	}
 	
         
