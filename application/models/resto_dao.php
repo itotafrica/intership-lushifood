@@ -42,8 +42,8 @@
 		}
 /*================================================================================================================*/
 
-		public function update($id, $nom=null, $description=null, $pu=null){
-			/*En cours*/
+		public function update($id= null, $nom=null, $description=null, $pu=null, $path=null){
+			
 			if ($nom == null AND $description == null AND $pu == null){
 				return false;
 			}
@@ -52,6 +52,7 @@
 				$this->db->set('nom', $nom);
 				$this->db->set('description', $description);
 				$this->db->set('pu', $pu);
+				$this->db->set('image', $path);
 				
 				return $this->db->where('id', (int)id)
 				->update($this->table_items);
