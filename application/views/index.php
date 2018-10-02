@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/head_home.css" />
 
-<link rel="stylesheet" type="text/css" media="screen" href="../css/head_caroussel.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/head_caroussel.css" />
 
 
 <link rel="stylesheet" type="text/css" media="screen" href="css/body_home.css" />
@@ -41,8 +41,13 @@
 <body>
 
 
-    <?php include("pages/head_home.php") ;?>
-    <?php include("pages/body_home.php") ;?>
+    <?php include("head_home.php") ;?>
+
+
+    <?php include("caroussel_home.php") ;?>
+
+    <?php include("body_home.php") ;?>
+    
     
 
 
