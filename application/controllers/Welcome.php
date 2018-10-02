@@ -45,13 +45,27 @@ class Welcome extends CI_Controller {
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
+		$conversation=$this->messagerieModel->recupererConversation();
+		foreach($conversation as $row)
+		{
+			$client=$row['id_client'];
+			$resto=$row['id_rest'];
+			$idconv=$row['id'];
+			if(($idclient==$client) && ($idresto==$resto))
+			{
+				
+			}
+			else{
+				
+			}
+		}
 		//var_dump($message);die;
 		$data["msg"]=$message;
 		$data["id_client"]=$idclient;
 		$data["id_rest"]=$idresto;
 		$data["date_conv"]=date("y-m-d h:i:sa");
 		$this->messagerieModel->insererConversation($data);
-		$coversation=$this->messagerieModel->recupererConversation();
+		//var_dump($conversation);die;
 		$this->load->view('restaurant-page');
 	}
 }
