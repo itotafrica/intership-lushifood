@@ -10,6 +10,4 @@ class MessagerieModel extends CI_Model{
 
     }
 }
-
-
 ?>
