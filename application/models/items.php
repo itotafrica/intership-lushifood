@@ -65,9 +65,17 @@ class items extends CI_models
 
 	}
 
-	public function modifier_item($id_item)
+	public function modifier_item($nom, $description, $prix_unit, $id_categorie, $id_resto, $path)
 	{
 
+			$this->db->set('nom', $nom);
+			$this->db->set('description', $description);
+			$this->db->set('pu', $prix_unit);
+			$this->db->set('idcot', $id_cot);
+			$this->db->set('idresto', $id_resto);
+			$this->db->set('image', $path);
+
+			return $this->db->insert($this->table_items)
 	}
 	/*function returnDescriptionDeCategorie ($id) {
 		$q = Doctrine_Query::CREATE()
