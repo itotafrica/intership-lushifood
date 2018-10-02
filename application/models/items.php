@@ -12,7 +12,7 @@ class items extends CI_models
 	}
 	
 	public function afficher_items($id){
-_
+
 			$query = $this->db->select(Array('nom','description','prix','images'))
 								->WHERE('id',(int)$id)
 								->get($this->table)
@@ -21,7 +21,7 @@ _
 		}
 
 		
-		echo "les items :" .$query->num_row();
+		//echo "les items :" .$query->num_row();
 		}
 	}
 
@@ -30,6 +30,11 @@ _
 	public function supprimer_item($id_item)
 	{
 		
+		$query = $this->db->where('id', (int)id)) 
+				->delete($this->table_items)
+				->result();
+		return $query;
+
 	}
 
 	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $){
