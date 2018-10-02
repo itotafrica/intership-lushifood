@@ -41,7 +41,11 @@
 					break;
 				case error.TIMEOUT:
                 alert('The request to get user location timed out.')
-                    break;
+					break;
+				case error.UNKNOWN_ERROR:
+                alert('An unknown error occurred.')
+                break;
+                }  
 			getLocation();
 			
 		</script>
