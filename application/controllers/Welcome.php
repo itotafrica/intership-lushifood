@@ -54,9 +54,9 @@ class Welcome extends CI_Controller {
 			if(($idclient==$client) && ($idresto==$resto))
 			{
 				$data=array(
-					"message"->$message,
-					"date_msg"->date("y-m-d h:i:sa"),
-					"id_conv"->$idconv
+					"message"=>$message,
+					"date_msg"=>date("y-m-d h:i:sa"),
+					"id_conv"=>$idconv
 				);
 			}
 			else
