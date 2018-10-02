@@ -102,18 +102,19 @@
 				$data = array('upload_data' => $this->upload->data());
 				foreach($chemin as $key => $value){
 					if($key === 'file_name'){
-					$path='./assets/uploads/'. $value;
+						$path='./assets/uploads/'. $value;
+					}
 				}
+				
+				$nom = $this->input->get('nom');
+				$description = $this->input->get('description');
+				$pu = $this->input->get('prix_unit');
+				$pu = $this->input->get('image');
+
+				$data['upload_data'] = $this->upload->data(); 
+				$this->resto_dao->update($id, $nom, $description, $pu,  $path);
+				$this->load->view('vue_items_info', $data);
 			}
-
-			$nom = $this->input->get('nom');
-			$description = $this->input->get('description');
-			$pu = $this->input->get('prix_unit');
-			$pu = $this->input->get('image');
-
-			$data['upload_data'] = $this->upload->data(); 
-			$this->resto_dao->update($id, $nom, $description, $pu,  $path);
-			$this->load->view('vue_items_info', $data);
 
 		}
 
