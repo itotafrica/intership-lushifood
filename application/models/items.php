@@ -10,7 +10,7 @@ class items extends CI_models
 
 		$this->load->database();
 	}
-	
+//----------------------------------affichage item----------------------------------	
 	public function afficher_items($id){
 
 			$query = $this->db->select(Array('nom','description','prix','images'))
@@ -26,7 +26,7 @@ class items extends CI_models
 	}
 
 
-	// en cours...
+	//------------------------auppression d'un item en cours...------------------------------------
 	public function supprimer_item($id_item)
 	{
 		
@@ -36,7 +36,7 @@ class items extends CI_models
 		return $query;
 
 	}
-
+//------------------------mise a jour----------------------------------------------------------------------------------------
 	public function modification_item($id_item, $nom=null, $description=null, $prix_unitaire=null, $images=NULL){
 	
 			if ($nom == null AND $description == null AND $pu == null){
