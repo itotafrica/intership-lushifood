@@ -19,7 +19,7 @@ class MessagerieModel extends CI_Model{
     function recupererMessage($idconv)
     {
         $this->db->where("id_conv",$idconv);
-        return $this->db->get("message");
+        return $this->db->get("Message")->row();
     }
 }
 ?>
