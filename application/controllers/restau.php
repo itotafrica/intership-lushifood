@@ -6,12 +6,10 @@ class Restau extends CI_Controller {
     function __construct(){
 	
         parent :: __construct();
-}
-}
-    public function info_restau()
-    {
         $this->load->models('restaurant');
     }
+}
+
 
 
 ?>    
