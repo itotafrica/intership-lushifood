@@ -54,8 +54,8 @@
 				$this->db->set('pu', $pu);
 				$this->db->set('image', $path);
 				
-				return $this->db->update($this->table_items)
-								->WHERE('id', (int)$id);
+				return $this->db->WHERE('id', (int)$id)
+							->update($this->table_items);
 			}
 		}
 	}
