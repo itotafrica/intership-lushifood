@@ -6,7 +6,8 @@ class items extends CI_models
 	
 	function __construct($id_item, $nom_item, $descript, $prix_unit, $images, $id_cot, $id_rest)
 	{
-	
+		parent:: __construct();
+
 		$this->load->database();
 
 		public function afficher_items($id){
@@ -46,12 +47,7 @@ _
 			}
 			return $this->db->insert($this->table_items)
 	}
-	/*function returnDescriptionDeCategorie ($id) {
-		$q = Doctrine_Query::CREATE()
-		->select('description')
-		->from('Categorie c')
-		->where('c.id_categorie = ?',$id);
-		return $q->fetchOne()*/
+	
         
         
         
