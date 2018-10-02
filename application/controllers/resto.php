@@ -6,7 +6,7 @@
 			parent::__construct();
 
 			$this->load->database();
-			$this->load->model("resto_dao");
+			$this->load->model("Resto_dao");
 			$this->load->helper(array('form', 'url'));
 		}
 
