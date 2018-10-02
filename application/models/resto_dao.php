@@ -55,7 +55,7 @@
 				$this->db->set('image', $path);
 				
 				return $this->db->update($this->table_items)
-								->where('id', (int)id);
+								->WHERE('id', (int)$id);
 			}
 		}
 	}
