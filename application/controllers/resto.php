@@ -116,5 +116,10 @@
 			$this->load->view('vue_items_info', $data);
 
 		}
+
+		public function page_modification_items(){
+
+			$this->load->view('vue_modification_items', $data);
+		}
 	}
 ?>
