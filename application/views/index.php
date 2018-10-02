@@ -6,12 +6,23 @@
 
     <title>HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/apk_Glou.css" />
+    
 
-
+    <link rel="stylesheet" type="text/css" media="screen" href="css/apk_Glou.css"/>
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="font-awesome/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/head_home.css" />
+
+    
+
+
+
+
+    
+    
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/head_home.css" />
 
