@@ -106,13 +106,12 @@
 					}
 				}
 
-				/*$nom = $this->input->get('nom');
+				$nom = $this->input->get('nom');
 				$description = $this->input->get('description');
 				$pu = $this->input->get('prix_unit');
-				$pu = $this->input->get('image');*/
 
 				$data['upload_data'] = $this->upload->data(); 
-				$this->resto_dao->update($id, $nom, $description, $pu,  $path);
+				$this->resto_dao->update($id, $nom, $description, $prix_unit,  $path);
 				$this->load->view('vue_items_info', $data);
 			}
 
