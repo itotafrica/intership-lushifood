@@ -16,5 +16,10 @@ class MessagerieModel extends CI_Model{
     {
         $this->db->insert("Message",$data);
     }
+    function recupererMessage($idconv)
+    {
+        $this->db->where("id_conv",$idconv);
+        return $this->db->get("message");
+    }
 }
 ?>
