@@ -12,5 +12,9 @@ class MessagerieModel extends CI_Model{
     {
        return $this->db->get("conversation")->result_array();
     }
+    function insererMessage($data)
+    {
+        $this->db->insert("message",$data);
+    }
 }
 ?>
