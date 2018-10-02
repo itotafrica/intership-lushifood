@@ -14,7 +14,7 @@ class MessagerieModel extends CI_Model{
     }
     function insererMessage($data)
     {
-        $this->db->insert("message",$data);
+        $this->db->insert("Message",$data);
     }
 }
 ?>
