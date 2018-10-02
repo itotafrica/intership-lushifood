@@ -64,12 +64,17 @@ class items extends CI_models
 	{
 
 	}
-	function returnDescriptionDeCategorie ($id) {
+
+	public function modifier_item($id_item)
+	{
+
+	}
+	/*function returnDescriptionDeCategorie ($id) {
 		$q = Doctrine_Query::CREATE()
 		->select('description')
 		->from('Categorie c')
 		->where('c.id_categorie = ?',$id);
-		return $q->fetchOne()
+		return $q->fetchOne()*/
         
         
         

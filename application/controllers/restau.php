@@ -10,11 +10,7 @@ class Restau extends CI_Controller {
 }
     public function info_restau()
     {
-<<<<<<< HEAD
         $this->load->models('afficher_info_restau');
-=======
-        $this->load->model('afficher_info_restau');
->>>>>>> master
     }
 
 
