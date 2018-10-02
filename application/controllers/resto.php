@@ -128,6 +128,8 @@
 
 		public function delete_items()
 		{
+			$id = $this->input->get('id');
+
 			
 		}
 		
