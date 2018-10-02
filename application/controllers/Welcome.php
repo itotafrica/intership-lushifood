@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
-		
+		$this->load->model('messagerieModel');
 	}
 	
 	public function index()
@@ -13,28 +14,34 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 
-	public function link_detail(){
+	public function link_detail()
+	{
 		$this->load->view('product-detail');
 	}
 
-	public function link_about(){
+	public function link_about()
+	{
 		$this->load->view('about');
 	}
-
-	public function link_login(){
+	public function link_login()
+	{
 		$this->load->view('login');
 	}
-	
-	public function link_restau(){
+
+	public function link_restau()
+	{
 		$this->load->view('restaurant-page');
 	}
-	
-	public function chat(){
+
+	public function chat()
+	{
 		$this->load->view('chat');
 	}
 
-	public function message(){
-		$this->load->model('messagerieModel');
+	public function message()
+	{
+
+		
 		$message=$this->input->post('msg');
 		$idclient=$this->input->post('idclient');
 		$idresto=$this->input->post("idresto");
@@ -44,6 +51,7 @@ class Welcome extends CI_Controller {
 		$data["id_rest"]=$idresto;
 		$data["date_conv"]=date("y-m-d h:i:sa");
 		$this->messagerieModel->insererConversation($data);
+		$coversation=$this->messagerieModel->recupererConversation();
 		$this->load->view('restaurant-page');
 	}
 }
