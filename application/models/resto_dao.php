@@ -63,7 +63,7 @@
 
 		public function delete($id)
 		{
-			return $this->db->where('id', (int)id)
+			return $this->db->WHERE('id', (int)$id)
 						->delete($this->table_items);
 		}
 	}
