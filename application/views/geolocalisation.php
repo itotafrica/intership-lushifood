@@ -30,7 +30,8 @@
                     maxZoom: 20
 				}).addTo(macarte);
 				var marker = L.marker([lat, long]).addTo(macarte);
-            }
+			}
+			function showError(error) {
 			getLocation();
 			
 		</script>
