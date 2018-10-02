@@ -112,7 +112,7 @@
 			$pu = $this->input->get('image');
 
 			$data['upload_data'] = $this->upload->data(); 
-			$this->resto_dao->update($nom, $description, $pu,  $path);
+			$this->resto_dao->update($id, $nom, $description, $pu,  $path);
 			$this->load->view('vue_items_info', $data);
 
 		}
