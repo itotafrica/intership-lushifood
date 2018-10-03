@@ -7,7 +7,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 	}
 	
-	public function chat()[]
+	public function chat()
 	{
 		$this->load->view('chat');
 	}
