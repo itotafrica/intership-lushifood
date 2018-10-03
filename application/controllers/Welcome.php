@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 	public function sign_up(){
 		$this->load->view('sign_up');
 	}
-	public function link_login(){
+	public function map(){
 		$this->load->view('map');
 	}
 	public function link_restau(){
