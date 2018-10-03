@@ -31,15 +31,11 @@
 						<ul class="main_menu">
 
 							<li>
-								<a href="restaurant-page.html">Accueil</a>
+								<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
 							</li>
 
 							<li>
-								<a href="about.html">A propos</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
+								<a href="<?php echo base_url('welcome/pageapropos'); ?>">A propos</a>
 							</li>
 						</ul>
 					</nav>
@@ -83,11 +79,11 @@
 				<ul class="main-menu">
 					
 					<li class="item-menu-mobile">
-						<a href="blog.html">Accueil</a>
+						<a href="<?php echo base_url('welcome/index');?>">Accueil</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="about.html">A propos</a>
+						<a href="<?php echo base_url('welcome/pageapropos'); ?>">A propos</a>
 					</li>
 
 					<li class="item-menu-mobile">
