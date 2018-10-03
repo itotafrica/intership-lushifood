@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\chat.css');?>" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\body_home.css');?>" />
-    
+
 
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\apk_Glou.css');?>"/>
 
@@ -32,15 +32,15 @@
     
     
 
-<link rel="stylesheet" type="text/css" media="screen" href="css/head_home.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\head_home.css');?>" />
 
-<link rel="stylesheet" type="text/css" media="screen" href="asset/js/head_caroussel.css" />
-
-
-<link rel="stylesheet" type="text/css" media="screen" href="asset/js/body_home.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\head_caroussel.css');?>" />
 
 
-<link rel="stylesheet" type="text/css" media="screen" href="asset/css/footer.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base url('assets\css\footer.css');?>" />
     
     
     
