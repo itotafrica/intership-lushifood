@@ -36,6 +36,8 @@ class Welcome extends CI_Controller {
 	public function chat()
 	{
 		$this->load->view('chat');
+		//$dataMessage['message']="message";
+		//$this->load->view('chat',$dataMessage);
 	}
 
 	public function message()
@@ -59,8 +61,9 @@ class Welcome extends CI_Controller {
 				);
 				$this->messagerieModel->insererMessage($data);
 				$messageRecuperer=$this->messagerieModel->recupererMessage($idconv);
-				$this->load->view('chat',$messageRecuperer);
-				//var_dump($messageRecuperer);die;
+				$dataMessage['message']=$messageRecuperer;
+				//$this->load->view('chat',$dataMessage);
+				//var_dump($dataMessage);die;
 			}
 			else
 			{
