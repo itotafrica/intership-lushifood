@@ -31,4 +31,11 @@ class Welcome extends CI_Controller {
 	public function chat(){
 		$this->load->view('chat');
 	}
+
+	public function getData(){
+		$data = array(
+			'usr_email' => $this->input->post('email'),
+			'usr_pwd' => $this->input->post('pass')
+		);
+	}
 }
