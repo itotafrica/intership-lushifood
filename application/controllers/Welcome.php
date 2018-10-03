@@ -20,9 +20,7 @@ class Welcome extends CI_Controller {
 	public function map(){
 		$this->load->view('map');
 	}
-	public function link_restau(){
-		$this->load->view('restaurant-page');
-	}
+	
 	public function home()
 	{
 		$this->load->view('head_home');
