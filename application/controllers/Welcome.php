@@ -12,13 +12,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('chat');
 	}
 	public function link_detail(){
-		$this->load->view('product-detail');
+		$this->load->view('login');
 	}
 	public function link_about(){
-		$this->load->view('about');
+		$this->load->view('sign_up');
 	}
 	public function link_login(){
-		$this->load->view('login');
+		$this->load->view('map');
 	}
 	public function link_restau(){
 		$this->load->view('restaurant-page');
@@ -26,7 +26,7 @@ class Welcome extends CI_Controller {
 	public function home()
 	{
 		$this->load->view('head_home');
-		
+
 		$this->load->view('head_caroussel');
 		$this->load->view('body_home');
 		$this->load->view('footer');
