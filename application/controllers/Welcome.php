@@ -14,7 +14,7 @@ class Welcome extends CI_Controller {
 	public function login(){
 		$this->load->view('login');
 	}
-	public function link_about(){
+	public function sign_up(){
 		$this->load->view('sign_up');
 	}
 	public function link_login(){
