@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
 	
 	public function home()
 	{
-		$this->load->view('head_home');
+		$this->load->view('home');
 
 		$this->load->view('head_caroussel');
 		$this->load->view('body_home');
