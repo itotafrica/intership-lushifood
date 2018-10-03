@@ -1,4 +1,4 @@
-<!--main content section-->$_COOKIE
+<!--main content section-->
 <section>
     <div class="mb-5">
         <div class="container">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-3">
+                <div class="col-mb-3">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-3">
+                <div class="mb-3">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-3">
+                <div class="mb-3">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
