@@ -76,6 +76,13 @@ class Welcome extends CI_Controller {
 		}
 		//$this->load->view('restaurant-page');
 	}
+
+	public function getData(){
+		$data = array(
+			'usr_email' => $this->input->post('email'),
+			'usr_pwd' => $this->input->post('pass')
+		);
+	}
 }
 
 ?>
