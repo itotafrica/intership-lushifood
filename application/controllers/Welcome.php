@@ -23,4 +23,9 @@ class Welcome extends CI_Controller {
 	public function link_restau(){
 		$this->load->view('restaurant-page');
 	}
+	public function home()
+	{
+		$this->load->view('home');
+	}
+
 }
