@@ -39,6 +39,10 @@ class Welcome extends CI_Controller {
 		//$dataMessage['message']="message";
 		//$this->load->view('chat',$dataMessage);
 	}
+	public function login()
+	{
+		$this->load->view('login2');
+	}
 
 	public function message()
 	{
