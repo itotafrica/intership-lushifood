@@ -9,6 +9,10 @@
    
 </head>
 <body>
-    
+<h1>Welcome to My Awesome App</h1>
+<div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div>
+<script src=<?php echo base_url('assets\js\firebase2.js');?>></script>
+<script src=<?php echo base_url('assets\js\login.js');?>></script>
 </body>
 </html>
