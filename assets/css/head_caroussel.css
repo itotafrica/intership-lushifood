@@ -1,0 +1,194 @@
+.container {
+    margin-top: 20px;
+}
+
+
+/* Carousel Styles */
+
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-image: none;
+    background-repeat: no-repeat;
+    text-shadow: none;
+}
+
+.carousel-control.left span {
+    padding: 15px;
+}
+
+.carousel-control.right span {
+    padding: 15px;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+    left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+    right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+    background-color: #000;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+    opacity: .7;
+    filter: alpha(opacity=70);
+}
+
+
+/* Carousel Header Styles */
+
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 0px;
+    font-size: 17px;
+    color: #8d8f90;
+    font-weight: 400;
+    line-height: 32px;
+    background-color: #edefef;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #25292a;
+    margin: 0px 0px 10px 0px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 32px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 17px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+p:last-child {
+    margin: 0px;
+}
+
+ul,
+ol {}
+
+a {
+    text-decoration: none;
+    color: #8d8f90;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: #f85759;
+}
+
+.page-header {
+    background: url(https://easetemplate.com/free-website-templates/hike/images/pageheader.jpg)no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 350px;
+}
+
+.page-caption {
+    padding-top: 170px;
+    padding-bottom: 174px;
+}
+
+.page-title {
+    font-size: 46px;
+    line-height: 1;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-section {
+    position: relative;
+    bottom: 60px;
+}
+
+.card-block {
+    padding: 80px;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}

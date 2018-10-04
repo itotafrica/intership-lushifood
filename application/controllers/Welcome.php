@@ -7,20 +7,42 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 	}
 	
-	public function index()
+	public function chat()
+
 	{
+		$this->load->view('globals/header');
+
 		$this->load->view('chat');
+		$this->load->view('globals/footer');
 	}
-	public function link_detail(){
-		$this->load->view('product-detail');
-	}
-	public function link_about(){
-		$this->load->view('about');
-	}
-	public function link_login(){
+	public function login(){
+		$this->load->view('globals/header');
 		$this->load->view('login');
+		$this->load->view('globals/footer');
+
 	}
-	public function link_restau(){
-		$this->load->view('restaurant-page');
+	public function sign_up(){
+		$this->load->view('globals/header');
+
+		$this->load->view('sign_up');
+		$this->load->view('globals/footer');
 	}
+	public function map(){
+
+		$this->load->view('globals/header');
+		$this->load->view('map');
+		$this->load->view('globals/footer');
+	}
+	
+	public function home()
+	{
+		
+		$this->load->view('globals/header');
+
+		$this->load->view('head_caroussel');
+		$this->load->view('body_home');
+		$this->load->view('globals/footer');
+		
+	}
+
 }
