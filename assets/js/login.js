@@ -29,7 +29,7 @@ var uiConfig = {
     // Terms of service url.
     tosUrl: 'authentification.php',
     // Privacy policy url.
-    privacyPolicyUrl: '<your-privacy-policy-url>'
+   
   };
   ui.start('#firebaseui-auth-container', uiConfig);
 
