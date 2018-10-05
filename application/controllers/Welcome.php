@@ -33,6 +33,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('restaurant-page');
 	}
 
+
 	public function chat()
 	{
 		$this->load->view('chat');
@@ -43,7 +44,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('login2');
 	}
-
+	public function authentification()
+	{
+		$this->load->view('authentification');
+	}
 	public function message()
 	{
 
