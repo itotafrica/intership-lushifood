@@ -12,18 +12,24 @@
             $this->load->library('form_validation');
             if ($this->fom_validation->run())
             {
-                $this->restaurant->ajouter_restaurant
-                $Nom_restaurant = $this->input->post('nom');
-                $Adresse_restaurant = $this->input->post('adresse');
-                $Email = $this->input->post('email');
-                $Contact = $this->input->post('contact');
+                $Nom_restaurant = $this->input->post('Nom_restaurant');
+                $Adresse_restaurant = $this->input->post('Adresse_restaurant');
+                $Email = $this->input->post('Email');
+                $Contact = $this->input->post('Contact');
+                $Latitude = $this->input->post('Latitude');
+                $Longitude = $this->input->post('Longitude');
+                
+
                 $data = array(
                     'Nom_restaurant'=>$Nom_restaurant,
                     'Adresse_restaurant'=>$Adresse_restaurant,
                     'Email'=>$Email,
-                    'Contact'=>$Contact);
+                    'Contact'=>$Contact,
+                    'Latitude'=>$Latitude,
+                    'Longitude'=>$Longitude );
                     $this->restaurant->ajouter_restaurant($data);
-                $this->load->view(vue_restaurant);
+                    $this->load->view(vue_restaurant);
+                
             }
         }
     }
