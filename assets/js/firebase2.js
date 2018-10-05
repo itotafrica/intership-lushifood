@@ -13,5 +13,5 @@ var app_firebase={};
 
   app_firebase=firebase;
   
-  app_firebase.prototype.setData= function
+  // app_firebase.prototype.setData= function
 })()
