@@ -13,6 +13,29 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\util.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets\css\main.css');?>">
 <!--===============================================================================================-->
+<!--===============================================================================================-->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+ <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAtttiOl9i-wGSK0QFUwf9H8cQrOhF6bxg",
+            authDomain: "glou-web-login.firebaseapp.com",
+            databaseURL: "https://glou-web-login.firebaseio.com",
+            projectId: "glou-web-login",
+            storageBucket: "glou-web-login.appspot.com",
+            messagingSenderId: "97694971563"
+        };
+		firebase.initializeApp(config);
+		
+		function login(){
+			firebase.auth().createUserWithEmailAndPassword("gaelmmg@gmail.fr", "password").catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            alert(errorMessage);
+        	});
+		}
+    </script>
 </head>
 <body >
 	
@@ -25,7 +48,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Mettez une adresse valide svp!: exemple@email.com">
-						<input class="input100" type="text" name="email" placeholder="Adresse email">
+						<input class="input100" type="text" name="email" placeholder="Adresse email" id="ip_email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<img src="<?php echo base_url('assets\images\user.png');?>" width="7%;">
@@ -33,7 +56,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Mettez un mot de passe">
-						<input class="input100" type="password" name="pass" placeholder="Mot de passe">
+						<input class="input100" type="password" name="pass" placeholder="Mot de passe" id="ip_pwd">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<img src="<?php echo base_url('assets\images\lock.png');?>" width="7%;">
@@ -41,7 +64,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn p-t-25">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn"  onClick="login()">
 							CONNEXION
 						</button>
 					</div>
@@ -62,18 +85,19 @@
 						Google
 					</a>
 
+
 				</form>
 			</div>
 		</div>
 	</div>
 	
 	
-
-	
 <!--===============================================================================================-->
 	<script src="<?php echo base_url('assets\vendor\jquery\jquery-3.2.1.min.js');?>"></script>
 <!--===============================================================================================-->
 	<script src="<?php echo base_url('assets\js\main.js');?>"></script>
+<!--===============================================================================================-->
+
 
 </body>
 </html>

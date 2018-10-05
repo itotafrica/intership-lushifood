@@ -33,13 +33,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('restaurant-page');
 	}
 
+
 	public function chat()
 	{
 		$this->load->view('chat');
 		//$dataMessage['message']="message";
 		//$this->load->view('chat',$dataMessage);
 	}
-
+	public function login()
+	{
+		$this->load->view('login2');
+	}
+	public function authentification()
+	{
+		$this->load->view('authentification');
+	}
 	public function message()
 	{
 
@@ -75,6 +83,13 @@ class Welcome extends CI_Controller {
 			}
 		}
 		//$this->load->view('restaurant-page');
+	}
+
+	public function getData(){
+		$data = array(
+			'usr_email' => $this->input->post('email'),
+			'usr_pwd' => $this->input->post('pass')
+		);
 	}
 }
 

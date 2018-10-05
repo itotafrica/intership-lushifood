@@ -128,8 +128,7 @@ textarea {
 
 						</div>
                         <div style = "position:absolute; width:50%;margin-top:6%;left:54%; background-color:rgba(2,2,111,0.8);color: white;" class ="col-sm-12 col-md-6 col-lg-4 p-b-50">
-							<div class="block2">
-									
+							<div class="block2">		
 							</div>
 						</div>
 					</div>
