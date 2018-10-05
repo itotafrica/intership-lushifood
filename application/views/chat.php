@@ -128,15 +128,19 @@ textarea {
 
 						</div>
                         <div style = "position:absolute; width:50%;margin-top:6%;left:54%; background-color:rgba(2,2,111,0.8);color: white;" class ="col-sm-12 col-md-6 col-lg-4 p-b-50">
-							<div class="block2">
-								ca va et toi?
+							<div class="block2">		
 							</div>
 						</div>
 					</div>
+					<form action="<?php echo site_url('welcome/message');?>" method="post">
 					<textarea type="text" placeholder="Entrez un message" name="msg" required></textarea>
+					<input type="hidden" value="1" name="idclient">
+					<input type="hidden" value="1" name="idresto">
 					<div id ="send">
  						<a href =""><img src =" <?php echo base_url('assets\images\send.png');?>" width ="100%"></a>
 					</div>
+					<input type="submit" value="Submit" class="">
+					</form>
 				</div>
 			</div>
 		</div>
